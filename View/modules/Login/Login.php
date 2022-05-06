@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../css/login.css" rel="stylesheet">
     <?php include '../../includes/css_config.php' ?>
-    <title>Login</title>
+    <title>Login - Ouvidoria Jahu</title>
 </head>
 
-<body class="text-center">
-    <main class="container">
-        <div class="form-signin">
+<body class="text-center flex">
+    <main class="container flex">
+        <div class="form-signin flex">
             <form>
-                <img class="mb-4" src="..\..\SiteOuvidoriaJau\imagens\brasaojahu.png" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 fw-normal">Ouvidoria Jaú - Login</h1>
+                <img class="mb-4" src="../../img/logo.png" alt="" width="100" height="100">
+                <h1 class="h3 mb-3 fw-normal">Ouvidoria Jahu - Login</h1>
 
                 <div class="form-floating" class="col-md-6 offset-md-3">
                     <input type="email" class="form-control" id="email" placeholder="name@example.com">
                     <label for="floatingInput">Email ou Telefone</label>
                 </div>
+                <br>
                 <div class="form-floating">
                     <input type="password" class="form-control" id="Senha" placeholder="Password">
                     <label for="floatingPassword">Senha</label>
