@@ -1,8 +1,5 @@
-<!--
-    * Anotações:
-        O Layout do site está quebrando em 992x708
--->
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
     <head>
     	<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,7 +54,7 @@
                 </div>
             </form>
         </main>
-        
+
         <!--
             * Realizando a inclussão das configurações básica para o Bootstrap funcionar.
         -->

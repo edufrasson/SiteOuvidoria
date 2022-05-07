@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -134,7 +134,7 @@
         <br><br>           
         <!-- FOOTER -->    
             <footer>
-                    <?php include '../../includes/rodape.php'; ?>
+                <?php include '../../includes/rodape.php'; ?>
             </footer>
         <!-- / FOOTER -->   
     </main>
