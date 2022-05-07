@@ -7,50 +7,60 @@
     	<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php include '../../includes/css_config.php' ?>
-        <title>Meu Perfil - OuvidoriaJahu</title>
         <link rel="stylesheet" href="./../../css/meuperfil.css">
+        <title>Meu Perfil - OuvidoriaJahu</title>
     </head>
 
     <body> 
+        <!--
+            * Realizando a inclusão de um arquivo externo de php, onde é responsavel por exibir o código HTML do
+            cabeçalho da nossa página.
+        -->
         <?php include "../../includes/cabecalho.php" ?>
+
+        <!-- Main -->
         <main class="form-nome container" class="position-relative">  
             <form method="POST" action="" id="form-nome" class="row g-3 position-absolute top-50 start-50 translate-middle">
-                <h1> Meu Perfil</h1>
+                <h1 class="text-center">Meu Perfil</h1>
                 <div class="col-md-6">
-                    <label for="Nome_Funcionario" class="form-label">Nome</label>
+                    <label for="nome-funcionario" class="form-label">Nome</label>
                     <fieldset>
-                        <input type="text" class="form-control" id="Nome_Funcionario">
+                        <input name="nome-funcionario" type="text" class="form-control" id="nome-funcionario">
                     </fieldset>
                 </div>
 	            <div class="col-md-6">
-	                <label for="Sobrenome_Funcionario" class="form-label">Sobrenome</label>
+	                <label for="sobrenome-funcionario" class="form-label">Sobrenome</label>
                     <fieldset>
-	                    <input type="text" class="form-control" id="Sobrenome_Funcionario">
+	                    <input name="sobrenome-funcionario" type="text" class="form-control" id="sobrenome-funcionario">
                     </fieldset>
 	            </div>
 	            <div class="col-12">
-	                <label for="Email_Funcionario" class="form-label">Email</label>
+	                <label for="email-funcionario" class="form-label">Email</label>
                     <fieldset>
-	                    <input type="email" class="form-control" id="Email_Funcionario">
+	                    <input name="email-funcionario" type="email" class="form-control" id="email-funcionario">
                     </fieldset>
 	            </div>
                 <div class="container px-3 py-4" id="senha">
-                    <h4 class="pb-2 border-bottom">Alterar senha</h4>
+                    <h4 class="text-center pb-2 border-bottom">Alterar senha</h4>
                 </div>
                 <div class="col-md-6">
-                    <input type="password" class="form-control" id="NovaSenha" placeholder="Nova senha...">
+                    <input name="nova-senha-funcionario" type="password" placeholder="Nova senha" class="form-control" id="nova-senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <input type="password" class="form-control" id="ConfirmarNovasenha" placeholder="Confirme sua nova senha...">
+                    <input name="confirmar-senha-funcionario" type="password" placeholder="Confirmar Senha" class="form-control" id="confirmar-senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <input type="password" class="form-control" id="Senha_Funcionario" placeholder="Digite sua senha antiga...">
+                    <input name="senha-funcionario" type="password" placeholder="Senha antiga" class="form-control" id="senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-outline-success">Alterar Senha</button>
+                    <button type="button" class="btn btn-outline-success">Alterar senha</button>
                 </div>
             </form>
-        </main>	
+        </main>
+        
+        <!--
+            * Realizando a inclussão das configurações básica para o Bootstrap funcionar.
+        -->
         <?php include '../../includes/js_config.php' ?> 
     </body>
 </html> 
