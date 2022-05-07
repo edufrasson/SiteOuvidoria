@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <script src="https://cdn.tiny.cloud/1/anrdpu30423fv0s3ykro7pdjmzcuip9j310uvludco6r8s6g/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" href="./../../css/responderdenuncia.css">
     <?php include '../../includes/css_config.php' ?>
     <meta charset="utf-8">
@@ -28,7 +27,7 @@
 
     <!-- Main -->
     <main>
-      <form class="form-dados-resposta">
+      <form class="form-dados-denuncia">
         <h2>Denúncia <span class="badge bg-danger">Novo</span></h2>
         <fieldset disabled>
           <input type="text" class="form-control" id="cidadao" placeholder="name@example.com" value="Nome/Endereço: Rafaela Bastos, 19. - Jardim Maria Cibele - Rua Amaral Orthega ">

@@ -11,10 +11,10 @@ main {
     flex-direction: column;
 }
 
-.form-dados-denuncia, .form-responder {
+.form-dados-sugestao, .form-responder {
     width: 70%;
 }
 
-.form-dados-denuncia h2, .form-responder div h2 {
+.form-dados-sugestao h2, .form-responder div h2 {
     text-align: center;
 }
