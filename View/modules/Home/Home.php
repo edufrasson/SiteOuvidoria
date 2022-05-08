@@ -5,16 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- configuração CSS -->
-    <?php include '../../includes/css_config.php' ?>
-    <link href="../../css/home.css" rel="stylesheet">   
-    <link href="carousel.css" rel="stylesheet">
+    <?php include 'View/includes/css_config.php' ?>
+    <link href="View/css/home.css" rel="stylesheet">      
 
     <title>Requerimentos Jaú</title>
 </head>
 
 <body>
     <header>
-        <?php include '../../includes/cabecalho.php' ?>
+        <?php include 'View/includes/cabecalho.php' ?>
     </header>
     <main>
         <section>
@@ -34,7 +33,7 @@
                             <img src="#" alt="imagem-item-1" width="52" height="52" class="d-inline-block align-text-top">
 
                             <div class="container">
-                                <div class="carousel-caption text-start">
+                                <div class="carousel-caption text-start ">
                                     <h1>Bem Vindo(a).</h1>
                                     <p>Acesse o site de Jaú para mais informações.</p>
                                     <p><a class="btn btn-lg btn-primary" href="https://www.jau.sp.gov.br/fale-conosco">Acessar</a></p>
@@ -51,7 +50,7 @@
                             <img src="#" alt="imagem-item-1" width="52" height="52" class="d-inline-block align-text-top">
 
                             <div class="container">
-                                <div class="carousel-caption">
+                                <div class="carousel-caption ">
                                     <h1>App Ouvidoria Jaú.</h1>
                                     <p>Agora disponível para Android e IOS.</p>
                                     <p><a class="btn btn-lg btn-primary" href="https://play.google.com/store/apps/details?id=com.w5.ouvidoria.ouvidoriajahu">Acessar página
@@ -68,9 +67,8 @@
                             </svg>
                             <img src="#" alt="imagem-item-1" width="52" height="52" class="d-inline-block align-text-top">
 
-
                             <div class="container">
-                                <div class="carousel-caption text-end">
+                                <div class="carousel-caption text-end ">
                                     <h1>Agradecimentos.</h1>
                                     <p>Etec Jaú, FATEC e Fundação - alunos entre 15 a 18 anos.</p>
                                     <p><a class="btn btn-lg btn-primary" href="http://www.etecjau.com.br/etecjau/">Saiba Mais</a></p>
@@ -134,10 +132,10 @@
         <br><br>           
         <!-- FOOTER -->    
             <footer>
-                <?php include '../../includes/rodape.php'; ?>
+                <?php include 'View/includes/rodape.php'; ?>
             </footer>
         <!-- / FOOTER -->   
     </main>
-    <?php include '../../includes/js_config.php'; ?>
+    <?php include 'View/includes/js_config.php'; ?>
 </body>
 </html>

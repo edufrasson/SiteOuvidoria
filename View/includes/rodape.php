@@ -6,7 +6,7 @@
             <svg class="bi me-2" width="40" height="32">
                 <use xlink:href="#bootstrap" />
             </svg>
-            <img src="../../img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
+            <img src="View/img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
         </a>
 
         <ul class="nav col-md-4 justify-content-end">

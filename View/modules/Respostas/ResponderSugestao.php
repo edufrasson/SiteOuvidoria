@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="../../css/respondersugestao.css">
-        <?php include '../../includes/css_config.php' ?>
+        <link rel="stylesheet" href="View/css/respondersugestao.css">
+        <?php include 'View/includes/css_config.php' ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Responder Sugestões - OuvidoriaJahu</title>
@@ -23,7 +23,7 @@
             * Realizando a inclusão de um arquivo externo de php, onde é responsavel por exibir o código HTML do
             cabeçalho da nossa página.
         -->
-        <?php include "../../includes/cabecalho.php" ?>
+        <?php include "View/includes/cabecalho.php" ?>
 
         <main>
             <form class="form-dados-sugestao">
@@ -68,6 +68,6 @@
     <!--
       * Realizando a inclussão das configurações básica para o Bootstrap funcionar.
     -->
-    <?php include '../../includes/js_config.php' ?> 
+    <?php include 'View/includes/js_config.php' ?> 
   </body>
 </html>

@@ -4,13 +4,13 @@
             <span class="navbar-toggler-icon"></span>
         </button> 
         <a class="navbar-brand" href="#">
-            <img src="../../img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
+            <img src="View/img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
         </a>            
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contatos</a>
@@ -29,7 +29,7 @@
                 <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
             </a>
             <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="..\..\SiteOuvidoriaJau\Perfil\TelaPerfil.html">Perfil</a></li>
+                <li><a class="dropdown-item" href="/meu_perfil">Perfil</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
