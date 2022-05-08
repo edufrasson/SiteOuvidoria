@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../css/login.css" rel="stylesheet">
-    <?php include '../../includes/css_config.php' ?>
+    <link href="./../../../View/css/login.css" rel="stylesheet">
+    <?php include 'View/includes/css_config.php' ?>
     <title>Login - Ouvidoria Jahu</title>
 </head>
 
@@ -13,7 +13,7 @@
     <main class="container flex">
         <div class="form-signin flex">
             <form>
-                <img class="mb-4" src="../../img/logo.png" alt="" width="100" height="100">
+                <img class="mb-4" src="./../../View/img/logo.png" alt="" width="100" height="100">
                 <h1 class="h3 mb-3 fw-normal">Ouvidoria Jahu - Login</h1>
 
                 <div class="form-floating" class="col-md-6 offset-md-3">
@@ -36,7 +36,7 @@
             </form>
         </div>
     </main>
-    <?php include '../../includes/js_config.php' ?>
+    <?php include 'View/includes/js_config.php' ?>
 </body>
 
 </html>

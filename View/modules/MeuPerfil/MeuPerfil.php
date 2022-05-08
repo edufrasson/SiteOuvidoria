@@ -3,8 +3,8 @@
     <head>
     	<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php include '../../includes/css_config.php' ?>
-        <link rel="stylesheet" href="./../../css/meuperfil.css">
+        <?php include 'View/includes/css_config.php' ?>
+        <link rel="stylesheet" href="./../../../View/css/meuperfil.css">
         <title>Meu Perfil - OuvidoriaJahu</title>
     </head>
 
@@ -13,7 +13,7 @@
             * Realizando a inclusão de um arquivo externo de php, onde é responsavel por exibir o código HTML do
             cabeçalho da nossa página.
         -->
-        <?php include "../../includes/cabecalho.php" ?>
+        <?php include "View/includes/cabecalho.php" ?>
 
         <!-- Main -->
         <main class="form-nome container" class="position-relative">  
@@ -58,6 +58,6 @@
         <!--
             * Realizando a inclussão das configurações básica para o Bootstrap funcionar.
         -->
-        <?php include '../../includes/js_config.php' ?> 
+        <?php include 'View/includes/js_config.php' ?> 
     </body>
 </html> 

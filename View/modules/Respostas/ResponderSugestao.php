@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="View/css/respondersugestao.css">
+        <link rel="stylesheet" href="./../../../View/css/respondersugestao.css">
         <?php include 'View/includes/css_config.php' ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">

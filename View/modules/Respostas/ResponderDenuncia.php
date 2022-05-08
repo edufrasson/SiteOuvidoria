@@ -6,7 +6,7 @@
   <?php include 'View/includes/css_config.php' ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../css/responderdenuncia.css">
+  <link rel="stylesheet" href="./../../../View/css/responderdenuncia.css">
   <title>Responder Denúncia - OuvidoriaJahu</title>
   <script>
     tinymce.init({
@@ -29,7 +29,7 @@
 
   <!-- Main -->
   <main>
-    <img src="View/img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
+    <img src="./../../View/img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
     <form class="form-dados-denuncia">
       <h2>Denúncia <span class="badge bg-danger">Novo</span></h2>
       <fieldset disabled>
