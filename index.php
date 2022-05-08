@@ -30,4 +30,8 @@
         case '/responder/sugestao':
             include 'View/modules/Respostas/ResponderSugestao.php';
         break;
+
+        default:
+            header("Location: /home");
+        break;
     }

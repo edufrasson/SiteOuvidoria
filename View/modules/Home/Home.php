@@ -102,11 +102,11 @@
 
                             <h2>Responder <span class="badge bg-success">Novo</span></h2>
                             <p>Próximo requerimento (ordenado por urgência).</p>
-                            <p><a class="btn btn-primary" href="..\..\SiteOuvidoriaJau\Respostas\TelaRespostaDenuncia.html">Expandir &raquo;</a></p>
+                            <p><a class="btn btn-primary" href="/responder/denuncia">Expandir &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
 
                         <!-- Coluna HISTÓRICO-->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 ">
                             <span class="iconify icon" data-icon="bi:journal-bookmark"></span>
                             <br><br>
 
