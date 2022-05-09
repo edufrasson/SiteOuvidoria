@@ -3,9 +3,14 @@
 switch($uri_parse){
 
     // Entidade Funcionário
-    case "/cadastrar/funcionario":
+    case "/funcionario/cadastrar":
         FuncionarioController::formFuncionario();
     break;
+    
+    case "/funcionario/listar":
+        FuncionarioController::listarFuncionario();
+    break;
+
     case "/funcionario/salvar":
         FuncionarioController::salvarFuncionario();
     break;

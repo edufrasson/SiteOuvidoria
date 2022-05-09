@@ -2,6 +2,7 @@
     class FuncionarioModel {
         
         public $id, $nome, $email, $pass;
+        public $arr_funcionarios;
 
         public function salvarFuncionario() {
 
@@ -11,5 +12,10 @@
             } else {
                 // Update
             }
+        }
+
+        public function getAllRowsFuncionario() {
+            $dao = new FuncionarioDAO();
+            $this->arr_funcionarios = $dao->selectAllFuncionario();
         }
     }

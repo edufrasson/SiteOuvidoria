@@ -20,4 +20,14 @@
             $stmt->execute();
 
         }
+
+        function selectAllFuncionario() {
+
+            $sql = "SELECT * FROM Funcionario";
+
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
     }

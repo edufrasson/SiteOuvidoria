@@ -2,7 +2,14 @@
     class FuncionarioController {
         
         public static function formFuncionario() {
-            include "./View/modules/Funcionario/formulario.php";
+            include "./View/modules/Funcionario/formFuncionario.php";
+        }
+
+        public static function listarFuncionario() {
+            $model = new FuncionarioModel();
+            $model->getAllRowsFuncionario();
+
+            include "./View/modules/Funcionario/listarFuncionario.php";
         }
 
         public static function salvarFuncionario() {
