@@ -7,7 +7,11 @@ class MySQL extends PDO{
 
     public function __construct()
     {
-        return parent::__construct($this->dsn, $this->user, $this->pass);
+        try {
+            return parent::__construct($this->dsn, $this->user, $this->pass);
+        } catch (PDOException $err) {
+            echo "Oooo irmãozinho... Deu erro ai $err";
+        }
     }
 }
     
