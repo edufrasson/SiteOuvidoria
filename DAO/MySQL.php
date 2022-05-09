@@ -1,7 +1,7 @@
 <?php
 
 class MySQL extends PDO{
-    private $dsn = "mysql:metoda.com.br:3306;dbname=metodaco_ouvidoria";
+    private $dsn = 'mysql:host="metoda.com.br:3306";dbname="metodaco_ouvidoria"';
     private $user = "metodaco_alunos";
     private $pass = "jau@2022";
 
