@@ -33,6 +33,11 @@
                             <td><a href="/funcionario/delete?id=<?= $item->id ?>">X</a> <a href="/funcionario/form?id=<?= $item->id ?>">Editar</a></td>
                         </tr>
                     <?php endforeach ?>
+                    <?php if(count($model->arr_funcionarios) == 0): ?>
+                        <tr>
+                            <td colspan="4">Nenhum funcionário encontrado.</td>
+                        </tr>
+                    <?php endif ?>
               </tbody>
             </table>
         </main>
