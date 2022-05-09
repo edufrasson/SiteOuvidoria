@@ -16,8 +16,9 @@
         </header>
         <main>
             <form action="/funcionario/salvar" method="POST">
-                <input name="nome-funcionario" type="text" placeholder="Nome do Funcionário...">
-                <input name="email-funcionario" type="email" placeholder="Email do Funcionário...">
+                <input type="hidden" value="<?= $model->id ?>" name="id-funcionario" />
+                <input name="nome-funcionario" value="<?= $model->nome ?>" type="text" placeholder="Nome do Funcionário...">
+                <input name="email-funcionario" value="<?= $model->email ?>" type="email" placeholder="Email do Funcionário...">
                 <input name="senha-funcionario" type="password" placeholder="Senha do Funcionário...">
                 <input type="submit" value="Cadastrar Funcionário">
             </form>

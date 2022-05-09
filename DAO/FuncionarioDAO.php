@@ -18,7 +18,7 @@
             $stmt->bindValue(2, sha1($model->pass));
             $stmt->bindValue(3, $model->email);
             $stmt->execute();
-
+            
         }
 
         function selectAllFuncionario() {
@@ -29,5 +29,41 @@
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        }
+
+        function selectFuncionarioById(int $id) {
+
+            $sql = "SELECT * FROM Funcionario WHERE id = ?";
+
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+
+            return $stmt->fetchObject("FuncionarioModel");
+
+        }
+
+        function deleteFuncionarioById(int $id) {
+
+            $sql = "DELETE FROM Funcionario WHERE id = ?";
+            
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+
+        }
+
+        function updateFuncionarioById(FuncionarioModel $model) {
+
+            $sql = "UPDATE Funcionario SET nome = ?, senha = ?, email = ? WHERE id = ?";
+
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, $model->nome);
+            $stmt->bindValue(2, sha1($model->pass));
+            $stmt->bindValue(3, $model->email);
+            $stmt->bindValue(4, $model->id);
+            $stmt->execute();
+
         }
     }

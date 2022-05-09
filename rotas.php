@@ -3,7 +3,7 @@
 switch($uri_parse){
 
     // Entidade Funcionário
-    case "/funcionario/cadastrar":
+    case "/funcionario/form":
         FuncionarioController::formFuncionario();
     break;
     
@@ -14,7 +14,12 @@ switch($uri_parse){
     case "/funcionario/salvar":
         FuncionarioController::salvarFuncionario();
     break;
-    
+
+    case "/funcionario/delete":
+        FuncionarioController::deleteFuncionario();
+    break;
+
+    // Outros
     case '/home':
         include 'View/modules/Home/Home.php';
     break;

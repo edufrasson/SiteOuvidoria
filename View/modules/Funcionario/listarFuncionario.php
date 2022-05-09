@@ -30,7 +30,7 @@
                             <th scope="row"><?= $item->id ?></th>
                             <td><?= $item->nome ?></td>
                             <td><?= $item->email ?></td>
-                            <td><a href="#">X</a> <a href="#">Editar</a></td>
+                            <td><a href="/funcionario/delete?id=<?= $item->id ?>">X</a> <a href="/funcionario/form?id=<?= $item->id ?>">Editar</a></td>
                         </tr>
                     <?php endforeach ?>
               </tbody>
