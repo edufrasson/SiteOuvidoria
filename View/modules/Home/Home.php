@@ -96,7 +96,7 @@
                 <div class="container marketing">              
                     <div class="row">
                         <!-- Coluna RESPONDER-->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 align-self-center">
                             <span class="iconify icon" data-icon="bx:message-detail"></span>
                             <br><br>
 
@@ -106,7 +106,7 @@
                         </div><!-- /.col-lg-4 -->
 
                         <!-- Coluna HISTÓRICO-->
-                        <div class="col-lg-4 ">
+                        <div class="col-lg-4 align-self-center">
                             <span class="iconify icon" data-icon="bi:journal-bookmark"></span>
                             <br><br>
 
@@ -116,7 +116,7 @@
                         </div><!-- /.col-lg-4 -->
 
                         <!-- Coluna ESTATÍSTICAS-->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 align-self-center">
                             <span class="iconify icon" data-icon="bi:clipboard-data"></span>
                             <br><br>
 

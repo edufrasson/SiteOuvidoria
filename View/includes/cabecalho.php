@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
         <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button> 
@@ -35,7 +35,6 @@
                 </li>
                 <li><a class="dropdown-item" href="..\..\SiteOuvidoriaJau\Login\TelaLogin.html">Sair</a></li>
             </ul>
-        </div>
-       
+        </div>       
     </div>
 </nav>
