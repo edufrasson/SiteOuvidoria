@@ -9,7 +9,7 @@
             $this->conexao = new MySQL();
         }
         
-        function insertFuncionario(FuncionarioModel $model) {
+        public function insert(FuncionarioModel $model) {
 
             $sql = "INSERT INTO Funcionario (nome, senha, email) VALUES (?, ?, ?)";
 
@@ -21,7 +21,7 @@
             
         }
 
-        function selectAllFuncionario() {
+        public function getAllRows() {
 
             $sql = "SELECT * FROM Funcionario";
 
@@ -32,7 +32,7 @@
 
         }
 
-        function selectFuncionarioById(int $id) {
+        public function getById(int $id) {
 
             $sql = "SELECT * FROM Funcionario WHERE id = ?";
 
@@ -44,7 +44,7 @@
 
         }
 
-        function deleteFuncionarioById(int $id) {
+        public function delete(int $id) {
 
             $sql = "DELETE FROM Funcionario WHERE id = ?";
             
@@ -54,7 +54,7 @@
 
         }
 
-        function updateFuncionarioById(FuncionarioModel $model) {
+        public function update(FuncionarioModel $model) {
 
             $sql = "UPDATE Funcionario SET nome = ?, senha = ?, email = ? WHERE id = ?";
 

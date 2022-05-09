@@ -1,36 +1,36 @@
 <?php
     class FuncionarioController {
         
-        public static function formFuncionario() {
+        public static function form() {
             $model = new FuncionarioModel();
 
-            if(isset($_GET['id'])) $model = $model->getByIdFuncionario( (int) $_GET['id'] );
+            if(isset($_GET['id'])) $model = $model->getById( (int) $_GET['id'] );
 
             include "./View/modules/Funcionario/formFuncionario.php";
         }
 
         public static function listarFuncionario() {
             $model = new FuncionarioModel();
-            $model->getAllRowsFuncionario();
+            $model->getAllRows();
 
             include "./View/modules/Funcionario/listarFuncionario.php";
         }
 
-        public static function salvarFuncionario() {
+        public static function save() {
             $model = new FuncionarioModel();
             $model->id = $_POST['id-funcionario'];
             $model->nome = $_POST['nome-funcionario'];
             $model->email = $_POST['email-funcionario'];
             $model->pass = $_POST['senha-funcionario'];
-            $model->salvarFuncionario();
+            $model->save();
 
             header("Location: /funcionario/listar");
         }
 
-        public static function deleteFuncionario() {
+        public static function delete() {
             $model = new FuncionarioModel();
 
-            $model->deleteFuncionario( (int) $_GET['id'] );
+            $model->delete( (int) $_GET['id'] );
 
             header("Location: /funcionario/listar");
         }

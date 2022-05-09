@@ -4,29 +4,29 @@
         public $id, $nome, $email, $pass;
         public $arr_funcionarios;
 
-        public function salvarFuncionario() {
+        public function save() {
             $dao = new FuncionarioDAO();
 
             if($this->id == null) {
-                $dao->insertFuncionario($this);
+                $dao->insert($this);
             } else {
-                $dao->updateFuncionarioById($this);
+                $dao->update($this);
             }
         }
 
-        public function deleteFuncionario(int $id) {
+        public function delete(int $id) {
             $dao = new FuncionarioDAO();
-            $dao->deleteFuncionarioById($id);
+            $dao->delete($id);
         }
 
-        public function getAllRowsFuncionario() {
+        public function getAllRows() {
             $dao = new FuncionarioDAO();
-            $this->arr_funcionarios = $dao->selectAllFuncionario();
+            $this->arr_funcionarios = $dao->getAllRows();
         }
 
-        public function getByIdFuncionario(int $id) {
+        public function getById(int $id) {
             $dao = new FuncionarioDAO();
-            $obj = $dao->selectFuncionarioById($id);
+            $obj = $dao->getById($id);
 
             // Operador Ternário
             // ? = Então | : = Se não
