@@ -4,7 +4,7 @@ switch($uri_parse){
 
     // Entidade Funcionário
     case "/funcionario/form":
-        FuncionarioController::formFuncionario();
+        FuncionarioController::form();
     break;
     
     case "/funcionario/listar":
@@ -12,11 +12,11 @@ switch($uri_parse){
     break;
 
     case "/funcionario/salvar":
-        FuncionarioController::salvarFuncionario();
+        FuncionarioController::save();
     break;
 
     case "/funcionario/delete":
-        FuncionarioController::deleteFuncionario();
+        FuncionarioController::delete();
     break;
 
     // Outros

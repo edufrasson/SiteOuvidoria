@@ -6,12 +6,7 @@
 
         public function save() {
             $dao = new FuncionarioDAO();
-
-            if($this->id == null) {
-                $dao->insert($this);
-            } else {
-                $dao->update($this);
-            }
+            return ($this->id == null) ? $dao->insert($this) : $dao->update($this);
         }
 
         public function delete(int $id) {
@@ -27,9 +22,6 @@
         public function getById(int $id) {
             $dao = new FuncionarioDAO();
             $obj = $dao->getById($id);
-
-            // Operador Ternário
-            // ? = Então | : = Se não
             return ($obj) ? $obj : new FuncionarioModel();
         }
     }
