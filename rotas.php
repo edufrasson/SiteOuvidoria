@@ -19,13 +19,14 @@ switch($uri_parse){
         FuncionarioController::delete();
     break;
 
+    // Login
+    case '/login':
+        LoginController::form();
+    break;
+
     // Outros
     case '/home':
         include 'View/modules/Home/Home.php';
-    break;
-
-    case '/login':
-        include 'View/modules/Login/Login.php';
     break;
 
     case '/estatisticas':
