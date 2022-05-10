@@ -24,6 +24,10 @@ switch($uri_parse){
         LoginController::form();
     break;
 
+    case "/login/processa":
+        LoginController::processar();
+    break;
+
     // Outros
     case '/home':
         include 'View/modules/Home/Home.php';
