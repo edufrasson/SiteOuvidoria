@@ -21,15 +21,20 @@ switch($uri_parse){
 
     case "/reclamacoes":
         ReclamacaoController::index();
-    break;    
+    break;
+    
+    // Login
+    case '/login':
+        LoginController::form();
+    break;
+
+    case "/login/processa":
+        LoginController::processar();
+    break;
 
     // Outros
     case '/home':
         include 'View/modules/Home/Home.php';
-    break;
-
-    case '/login':
-        include 'View/modules/Login/Login.php';
     break;
 
     case '/estatisticas':
