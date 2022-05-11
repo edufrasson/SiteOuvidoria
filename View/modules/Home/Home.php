@@ -102,7 +102,7 @@
 
                             <h2>Responder <span class="badge bg-success">Novo</span></h2>
                             <p>Próximo requerimento (ordenado por urgência).</p>
-                            <p><a class="btn btn-primary" href="/responder/denuncia">Expandir &raquo;</a></p>
+                            <p><a class="btn btn-primary" href="/reclamacoes">Expandir &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
 
                         <!-- Coluna HISTÓRICO-->

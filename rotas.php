@@ -19,6 +19,10 @@ switch($uri_parse){
         FuncionarioController::delete();
     break;
 
+    case "/reclamacoes":
+        ReclamacaoController::index();
+    break;    
+
     // Outros
     case '/home':
         include 'View/modules/Home/Home.php';

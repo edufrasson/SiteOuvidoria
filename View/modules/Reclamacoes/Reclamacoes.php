@@ -6,7 +6,7 @@
   <?php include 'View/includes/css_config.php' ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./../../../View/css/responderdenuncia.css">
+  <link rel="stylesheet" href="./../../../View/css/reclamacoes.css">
   <title>Resquerimentos - OuvidoriaJahu</title>
   <script>
     tinymce.init({
@@ -29,9 +29,32 @@
 
   <!-- Main -->
   <main>
-        <div class="container">
-            
+    <div class="container flex">
+      <?php foreach ($arr_reclamacao as $reclamacao) : ?>
+        <div class="card">
+          <div class="card-header">
+            <h1 class="title">
+              <?= $reclamacao->titulo?>
+            </h1>
+            <h4 class="subtitle">
+              <?= $reclamacao->categoria?>
+            </h4>
+          </div>
+
+          <div class="card-body">
+            <p>
+              <?= $reclamacao->descricao?>
+            </p>
+          </div>
+
+          <div class="card-footer">
+            <h5 class="status">
+              <?= $reclamacao->status_reclamacao?>
+            </h5>
+          </div>
         </div>
+      <?php endforeach ?>
+    </div>
   </main>
 
   <!--

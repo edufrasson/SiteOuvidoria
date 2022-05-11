@@ -7,3 +7,9 @@
 html, body{
     font-family: 'Lato', sans-serif;
 }
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
