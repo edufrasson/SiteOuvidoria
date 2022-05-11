@@ -12,17 +12,17 @@
 <body class="text-center flex">
     <main class="container flex">
         <div class="form-signin flex">
-            <form>
+            <form action="/login/processa" method="POST">
                 <img class="mb-4" src="./../../View/img/logo.png" alt="" width="100" height="100">
                 <h1 class="h3 mb-3 fw-normal">Ouvidoria Jahu - Login</h1>
 
                 <div class="form-floating" class="col-md-6 offset-md-3">
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                    <label for="floatingInput">Email ou Telefone</label>
+                    <input name="email-username" type="text" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="floatingInput">Email ou Username</label>
                 </div>
                 <br>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="Senha" placeholder="Password">
+                    <input name="senha" type="password" class="form-control" id="Senha" placeholder="Password">
                     <label for="floatingPassword">Senha</label>
                 </div>
 

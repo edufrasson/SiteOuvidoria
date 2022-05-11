@@ -18,6 +18,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Suporte Técnico</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/funcionario/listar">Ver Funcionários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/funcionario/form">Cadastrar Funcionários</a>
+                </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">                
