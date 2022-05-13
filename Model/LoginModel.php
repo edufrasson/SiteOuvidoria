@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     class LoginModel {
         public $nome, $email, $senha;
 
@@ -12,8 +14,7 @@
             $dados_do_usuario = $dao->selectByUserForLogin($this);
 
             if($dados_do_usuario) {
-                session_start();
-                $_SESSION['usuario_logado'] = $dados_do_usuario->id;
+                $_SESSION['usuario'] = array($dados_do_usuario->id, $dados_do_usuario->nome, $dados_do_usuario->email, $dados_do_usuario->senha);
                 header("Location: /home");
             } else {
                 header("Location: /login");

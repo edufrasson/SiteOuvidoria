@@ -39,7 +39,7 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="..\..\SiteOuvidoriaJau\Login\TelaLogin.html">Sair</a></li>
+                <li><a class="dropdown-item" href="/home?sair=true">Sair</a></li>
             </ul>
         </div>       
     </div>
