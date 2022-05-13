@@ -57,6 +57,6 @@ switch($uri_parse){
     break;
 
     default:
-        header("Location: /home");
+        header("Location: /login");
     break;
     }
