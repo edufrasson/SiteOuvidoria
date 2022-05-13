@@ -1,3 +1,21 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $email = $_SESSION['usuario'][2];
+        $senha = $_SESSION['usuario'][3];
+    } else {
+        header("Location: /login");
+    }
+
+    if(isset($_GET['sair'])) {
+        unset($_SESSION['usuario']);
+        header("Location: /login");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
