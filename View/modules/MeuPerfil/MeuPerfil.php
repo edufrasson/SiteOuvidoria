@@ -23,7 +23,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php include 'View/includes/css_config.php' ?>
         <link rel="stylesheet" href="./../../../View/css/meuperfil.css">
-        <title>Meu Perfil - OuvidoriaJahu</title>
+        <title>Perfil <?= $nome ?> - OuvidoriaJahu</title>
     </head>
 
     <body> 
@@ -36,23 +36,18 @@
         <!-- Main -->
         <main class="form-nome container" class="position-relative">  
             <form method="POST" action="" id="form-nome" class="row g-3 position-absolute top-50 start-50 translate-middle">
+                <input type="hidden" value="<?= $id ?>" name="id-funcionario" />  
                 <h1 class="text-center">Meu Perfil</h1>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <label for="nome-funcionario" class="form-label">Nome</label>
-                    <fieldset>
-                        <input name="nome-funcionario" type="text" class="form-control" id="nome-funcionario">
+                    <fieldset disabled>
+                        <input value="<?= $nome ?>" name="nome-funcionario" type="text" class="form-control" id="nome-funcionario">
                     </fieldset>
                 </div>
-	            <div class="col-md-6">
-	                <label for="sobrenome-funcionario" class="form-label">Sobrenome</label>
-                    <fieldset>
-	                    <input name="sobrenome-funcionario" type="text" class="form-control" id="sobrenome-funcionario">
-                    </fieldset>
-	            </div>
 	            <div class="col-12">
 	                <label for="email-funcionario" class="form-label">Email</label>
-                    <fieldset>
-	                    <input name="email-funcionario" type="email" class="form-control" id="email-funcionario">
+                    <fieldset disabled>
+	                    <input value="<?= $email ?>" name="email-funcionario" type="email" class="form-control" id="email-funcionario">
                     </fieldset>
 	            </div>
                 <div class="container px-3 py-4" id="senha">
@@ -65,7 +60,7 @@
                     <input name="confirmar-senha-funcionario" type="password" placeholder="Confirmar Senha" class="form-control" id="confirmar-senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <input name="senha-funcionario" type="password" placeholder="Senha antiga" class="form-control" id="senha-funcionario">
+                    <input name="senha-antiga-funcionario" type="password" placeholder="Senha antiga" class="form-control" id="senha-funcionario">
                 </div>
                 <div class="col-md-6">
                     <button type="button" class="btn btn-outline-success">Alterar senha</button>
