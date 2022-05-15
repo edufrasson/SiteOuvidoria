@@ -28,7 +28,7 @@
 
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me"> Lembre de mim
+                        <input name="lembrar-de-mim" type="checkbox"> Lembre de mim
                     </label>
                 </div>
                 <button type="submit" class="btn btn-lg btn-primary">Entrar</button>
