@@ -1,7 +1,8 @@
 <?php
-    class LoginController {
+    class LoginController extends Controller {
         
         public static function form() {
+            $usuario = (isset($_COOKIE['funcionario_user'])) ? $_COOKIE['funcionario_user'] : "";
             include 'View/modules/Login/Login.php';
         }
 
