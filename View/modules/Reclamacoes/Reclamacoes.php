@@ -1,12 +1,3 @@
-<?php
-  
-
-  if(isset($_GET['sair'])) {
-      unset($_SESSION['usuario']);
-      header("Location: /login");
-  }
-?>
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -16,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./../../../View/css/reclamacoes.css">
-  <title>Resquerimentos - OuvidoriaJahu</title>
+  <title>Requerimentos - OuvidoriaJahu</title>
   <script>
     tinymce.init({
       selector: 'textarea#responder-denuncia',
@@ -44,18 +35,19 @@
           <div class="card-header">
             <h1 class="title">
               <?= $reclamacao->titulo?>
-            </h1>
+            </h1>           
+            
+          </div>          
+          
+          <div class="card-body">   
             <h4 class="subtitle">
               <?= $reclamacao->categoria?>
-            </h4>
-          </div>
-
-          <div class="card-body">           
+            </h4>       
           </div>
 
           <div class="card-footer">
             <h5 class="status">
-              <?= $reclamacao->status_reclamacao?>
+              Status: <?= $reclamacao->status_reclamacao?>
             </h5>
           </div>
         </div>
