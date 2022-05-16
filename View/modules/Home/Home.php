@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
         $id = $_SESSION['usuario'][0];

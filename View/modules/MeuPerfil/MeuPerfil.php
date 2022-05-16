@@ -1,21 +1,3 @@
-<?php
-    session_start();
-
-    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
-        $id = $_SESSION['usuario'][0];
-        $nome = $_SESSION['usuario'][1];
-        $email = $_SESSION['usuario'][2];
-        $senha = $_SESSION['usuario'][3];
-    } else {
-        header("Location: /login");
-    }
-
-    if(isset($_GET['sair'])) {
-        unset($_SESSION['usuario']);
-        header("Location: /login");
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -23,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php include 'View/includes/css_config.php' ?>
         <link rel="stylesheet" href="./../../../View/css/meuperfil.css">
-        <title>Perfil <?= $nome ?> - OuvidoriaJahu</title>
+        <title>Perfil <?= $_SESSION['usuario'][1] ?> - OuvidoriaJahu</title>
     </head>
 
     <body> 
@@ -41,13 +23,13 @@
                 <div class="col-md-12">
                     <label for="nome-funcionario" class="form-label">Nome</label>
                     <fieldset disabled>
-                        <input value="<?= $nome ?>" name="nome-funcionario" type="text" class="form-control" id="nome-funcionario">
+                        <input value="<?= $_SESSION['usuario'][1] ?>" name="nome-funcionario" type="text" class="form-control" id="nome-funcionario">
                     </fieldset>
                 </div>
 	            <div class="col-12">
 	                <label for="email-funcionario" class="form-label">Email</label>
                     <fieldset disabled>
-	                    <input value="<?= $email ?>" name="email-funcionario" type="email" class="form-control" id="email-funcionario">
+	                    <input value="<?= $_SESSION['usuario'][2]?>" name="email-funcionario" type="email" class="form-control" id="email-funcionario">
                     </fieldset>
 	            </div>
                 <div class="container px-3 py-4" id="senha">

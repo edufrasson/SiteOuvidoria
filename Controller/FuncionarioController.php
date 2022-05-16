@@ -1,12 +1,15 @@
 <?php
-    class FuncionarioController {
+    class FuncionarioController extends Controller {
         
-        public static function form() {
+        public static function form() 
+        {
+            parent::isAuthenticated();
+
             $model = new FuncionarioModel();
 
             if(isset($_GET['id'])) $model = $model->getById( (int) $_GET['id'] );
 
-            include "./View/modules/Funcionario/formFuncionario.php";
+            parent::render('Funcionario/formFuncionario', $model);
         }
 
         public static function listarFuncionario() {
@@ -14,6 +17,12 @@
             $model->getAllRows();
 
             include "./View/modules/Funcionario/listarFuncionario.php";
+        }
+
+        public static function myAccount(){
+            parent::isAuthenticated();
+
+            parent::render('MeuPerfil/MeuPerfil.php');
         }
 
         public static function save() {
