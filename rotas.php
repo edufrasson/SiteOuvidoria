@@ -19,6 +19,10 @@ switch($uri_parse){
         FuncionarioController::delete();
     break;
 
+    case '/meu_perfil':
+        FuncionarioController::myAccount();
+    break;
+
     case "/reclamacoes":
         ReclamacaoController::index();
     break;
@@ -43,10 +47,7 @@ switch($uri_parse){
 
     case '/historico':
         include 'View/modules/Historico/Historico.php';
-    break;
-    case '/meu_perfil':
-        include 'View/modules/MeuPerfil/MeuPerfil.php';
-    break;
+    break; 
 
     case '/responder/denuncia':
         include 'View/modules/Respostas/ResponderDenuncia.php';
