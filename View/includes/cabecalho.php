@@ -13,7 +13,7 @@
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contatos</a>
+                    <a class="nav-link" href="/reclamacoes">Reclamações</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Suporte Técnico</a>
