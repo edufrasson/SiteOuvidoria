@@ -36,11 +36,12 @@ switch($uri_parse){
         LoginController::processar();
     break;
 
-    // Outros
+    // Home
     case '/home':
-        include 'View/modules/Home/Home.php';
+        HomeController::ViewHome();
     break;
 
+    // Outros
     case '/estatisticas':
         include 'View/modules/Estatisticas/Estatisticas.php';
     break;
