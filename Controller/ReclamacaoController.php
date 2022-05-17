@@ -5,8 +5,8 @@ class ReclamacaoController extends Controller {
         parent::isAuthenticated();
 
         $model = new ReclamacaoModel();
-        $arr_reclamacao = $model->getAll();
+        $arr_reclamacoes = $model->getAll();     
 
-        parent::render("Reclamacoes/Reclamacoes");
+        include './View/modules/Reclamacoes/Reclamacoes.php';
     }   
 }

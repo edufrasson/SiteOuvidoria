@@ -30,7 +30,7 @@
   <!-- Main -->
   <main>
     <div class="container flex">
-      <?php foreach ($arr_reclamacao as $reclamacao) : ?>
+      <?php foreach($arr_reclamacoes as $reclamacao) : ?>
         <div class="card">
           <div class="card-header">
             <h1 class="title">
@@ -49,6 +49,10 @@
             <h5 class="status">
               Status: <?= $reclamacao->status_reclamacao?>
             </h5>
+            <div class="actions">
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+            </div>
           </div>
         </div>
       <?php endforeach ?>

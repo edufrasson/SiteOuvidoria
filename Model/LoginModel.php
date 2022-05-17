@@ -19,8 +19,7 @@
             }
         }
 
-        private static function 
-        remember($user) {
+        private static function remember($user) {
             $validade = strtotime("+1 month");
             setcookie("funcionario_user", $user, $validade, "/", "", false, true);
         }
