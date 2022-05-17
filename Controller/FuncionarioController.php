@@ -13,16 +13,18 @@
         }
 
         public static function listarFuncionario() {
+            parent::isAuthenticated();
+
             $model = new FuncionarioModel();
             $model->getAllRows();
 
-            include "./View/modules/Funcionario/listarFuncionario.php";
+            parent::render("Funcionario/listarFuncionario");
         }
 
         public static function myAccount(){
             parent::isAuthenticated();
 
-            parent::render('MeuPerfil/MeuPerfil.php');
+            parent::render('MeuPerfil/MeuPerfil');
         }
 
         public static function save() {

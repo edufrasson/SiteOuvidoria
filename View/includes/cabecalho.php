@@ -41,7 +41,7 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="/home?sair=true">Sair</a></li>
+                <li><a class="dropdown-item" href="/logout?sair=true">Sair</a></li>
             </ul>
         </div>
     </div>

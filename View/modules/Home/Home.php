@@ -8,7 +8,7 @@
     <?php include 'View/includes/css_config.php' ?>
     <link href="View/css/home.css" rel="stylesheet">      
 
-    <title>Seja Bem Vindo <?= $_SESSION['usuario'][1] ?> - OuvidoriaJahu</title>
+    <title>Seja Bem Vindo <?= $_SESSION['usuario']->nome ?> - OuvidoriaJahu</title>
 </head>
 
 <body>

@@ -36,6 +36,10 @@ switch($uri_parse){
         LoginController::processar();
     break;
 
+    case "/logout":
+        LoginController::logout();
+    break;
+
     // Home
     case '/home':
         HomeController::ViewHome();
