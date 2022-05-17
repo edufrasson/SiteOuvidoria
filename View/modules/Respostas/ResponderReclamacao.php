@@ -33,18 +33,18 @@
     <form class="form-dados-denuncia">
       <h2>Denúncia <span class="badge bg-danger">Novo</span></h2>
       <fieldset disabled>
-        <input type="text" class="form-control" id="cidadao" placeholder="name@example.com" value="Nome/Endereço: Rafaela Bastos, 19. - Jardim Maria Cibele - Rua Amaral Orthega ">
+        <input type="text" class="form-control" id="cidadao" placeholder="name@example.com" value="<?= $reclamacao->titulo ?>">
         <div id="requerimento" class="form-floating">
-          <textarea class="form-control" id="requerimento" style="height: 100px">Motivo: Trata-se de alguns indivíduos que realizam festas próximos a residências com som alto, o que atrapalha muitos moradores. Gostaria que checassem, grata!</textarea>
+          <textarea class="form-control" id="requerimento" style="height: 100px"><?= $reclamacao->descricao ?></textarea>
         </div>
       </fieldset>
       <fieldset disabled>
         <div class="mb-3">
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Status: Pendente">
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Status: <?= $reclamacao->status_reclamacao?>">
         </div>
       </fieldset>
     </form>
-    <form class="form-responder">
+    <form class="form-responder">      
       <div class="container px-3 py-4" id="historicos">
         <h2 class="pb-2 border-bottom">Resposta (Adicionar Informações)</h2>
       </div>

@@ -49,9 +49,10 @@
             <h5 class="status">
               Status: <?= $reclamacao->status_reclamacao?>
             </h5>
-            <div class="actions">
-              <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-danger">Danger</button>
+            <hr class="hr">
+            <div class="actions d-flex justify-content-between">
+              <a href="/responder?id=<?= $reclamacao->id?>" class="btn btn-success">Responder</a>
+              <a href="/deletar?id=<?= $reclamacao->id?>" class="btn btn-danger">Deletar</a>
             </div>
           </div>
         </div>

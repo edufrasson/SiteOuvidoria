@@ -7,6 +7,12 @@ class ReclamacaoModel{
     public function getAll(){
         $dao = new ReclamacaoDAO();
 
-       return $dao->getAllRows();
+        return $dao->getAllRows();
+    }
+
+    public function getById($id){
+        $dao = new ReclamacaoDAO();
+
+        return $dao->getById($id);
     }
 }

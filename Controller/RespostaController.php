@@ -2,7 +2,7 @@
 
 class RespostaController extends Controller{
     public static function form(){
-
+            
     }
 
     public static function index(){

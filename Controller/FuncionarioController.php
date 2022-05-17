@@ -18,7 +18,7 @@
             $model = new FuncionarioModel();
             $model->getAllRows();
 
-            parent::render("Funcionario/listarFuncionario");
+            include './View/modules/Funcionario/listarFuncionario.php';
         }
 
         public static function myAccount(){

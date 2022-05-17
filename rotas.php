@@ -23,9 +23,14 @@ switch($uri_parse){
         FuncionarioController::myAccount();
     break;
 
+    // Rotas para reclamações
     case "/reclamacoes":
         ReclamacaoController::index();
     break;
+
+    case "/responder":
+        ReclamacaoController::responder();
+    break;    
     
     // Login
     case '/login':
