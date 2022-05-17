@@ -22,7 +22,7 @@
         public static function myAccount(){
             parent::isAuthenticated();
 
-            parent::render('MeuPerfil/MeuPerfil.php');
+            parent::render('MeuPerfil/MeuPerfil');
         }
 
         public static function save() {
