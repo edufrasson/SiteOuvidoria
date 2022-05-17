@@ -1,12 +1,3 @@
-<?php
-    if(isset($_GET['sair'])) {
-        unset($_SESSION['usuario']);
-        $validade = time() - 3600;
-        setcookie("funcionario_user", "", $validade, "/", "", false, true);
-        header("Location: /login");
-    }
-?>
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -17,7 +8,7 @@
     <?php include 'View/includes/css_config.php' ?>
     <link href="View/css/home.css" rel="stylesheet">      
 
-    <title>Seja Bem Vindo <?= $_SESSION['usuario'][1] ?> - OuvidoriaJahu</title>
+    <title>Seja Bem Vindo <?= $_SESSION['usuario']->nome ?> - OuvidoriaJahu</title>
 </head>
 
 <body>
