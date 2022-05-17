@@ -3,7 +3,7 @@
         
         public static function form() {
             $usuario = (isset($_COOKIE['funcionario_user'])) ? $_COOKIE['funcionario_user'] : "";
-            include 'View/modules/Login/Login.php';
+            parent::render("Login/Login");
         }
 
         public static function processar() {

@@ -1,11 +1,12 @@
 <?php
 
-class ReclamacaoController{
+class ReclamacaoController extends Controller {
     public static function index(){
-        $model = new ReclamacaoModel();
+        parent::isAuthenticated();
 
+        $model = new ReclamacaoModel();
         $arr_reclamacao = $model->getAll();
 
-        include 'View/modules/Reclamacoes/Reclamacoes.php';
+        parent::render("Reclamacoes/Reclamacoes");
     }   
 }
