@@ -2,31 +2,33 @@
     <div class="container">
         <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button> 
+        </button>
         <a class="navbar-brand" href="#">
             <img src="./../../View/img/logo.png" alt="mdo" width="52" height="52" class="d-inline-block align-text-top">
-        </a>            
-        
+        </a>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    <a class="nav-link active text-dark" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/reclamacoes">Reclamações</a>
+                    <a class="nav-link text-dark" href="#">Suporte Técnico</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Suporte Técnico</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/funcionario/listar">Ver Funcionários</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/funcionario/form">Cadastrar Funcionários</a>
-                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Funcionário
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="nav-link text-dark" href="/funcionario/listar">Ver Funcionários</a></li>
+                            <li><a class="nav-link text-dark" href="/funcionario/form">Cadastrar Funcionários</a></li>
+                        </ul>
+                    </div>
+                </li>                       
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">                
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
         </div>
         <!-- Dropdown do User -->
@@ -41,6 +43,6 @@
                 </li>
                 <li><a class="dropdown-item" href="/home?sair=true">Sair</a></li>
             </ul>
-        </div>       
+        </div>
     </div>
 </nav>

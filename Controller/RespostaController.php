@@ -1,6 +1,6 @@
 <?php
 
-class RespostaController{
+class RespostaController extends Controller{
     public static function form(){
 
     }
@@ -10,6 +10,6 @@ class RespostaController{
     }
 
     public static function save(){
-        
+
     }
 }
