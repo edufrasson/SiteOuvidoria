@@ -30,7 +30,12 @@ switch($uri_parse){
 
     case "/responder":
         ReclamacaoController::responder();
-    break;    
+    break; 
+    
+    // Rotas para resposta
+    case "/resposta/save":
+        RespostaController::save();
+    break;
     
     // Login
     case '/login':

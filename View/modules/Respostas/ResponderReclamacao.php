@@ -44,14 +44,15 @@
         </div>
       </fieldset>
     </form>
-    <form class="form-responder">      
+    <form class="form-responder" action="/resposta/save" method="POST"> 
+      <input type="hidden" value="<?= $_GET['id'] ?>" name="id_reclamacao">     
       <div class="container px-3 py-4" id="historicos">
         <h2 class="pb-2 border-bottom">Resposta (Adicionar Informações)</h2>
       </div>
       <div id="requerimento" class="form-floating">
-        <textarea class="form-control" id="responder-denuncia" style="height: 100px"></textarea>
+        <textarea class="form-control" id="responder-denuncia" name="descricao" style="height: 100px"></textarea>
       </div>
-      <button type="button" class="btn btn-primary btn-lg" id="liveToastBtn">Notificar Usuário</button>
+      <button type="submit" class="btn btn-primary btn-lg" id="liveToastBtn">Notificar Usuário</button>
       <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header">

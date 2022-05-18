@@ -1,6 +1,6 @@
 <?php
     class LoginModel {
-        public $nome, $email, $senha, $status_lembrar = false;
+        public $id, $nome, $email, $senha, $status_lembrar = false;
         public $user_cookie;
 
         public function authenticateLogin() {
