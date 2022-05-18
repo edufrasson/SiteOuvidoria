@@ -13,7 +13,7 @@
                     <a class="nav-link active text-dark" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Suporte Técnico</a>
+                    <a class="nav-link text-dark" href="/reclamacoes">Reclamações</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <div class="dropdown">
