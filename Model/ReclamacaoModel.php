@@ -10,6 +10,12 @@ class ReclamacaoModel{
         return $dao->getAllRows();
     }
 
+    public function getAllByStatus($status){
+        $dao = new ReclamacaoDAO();
+
+        return $dao->getAllByStatus($status);
+    }
+
     public function getById($id){
         $dao = new ReclamacaoDAO();
 

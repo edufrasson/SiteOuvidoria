@@ -26,4 +26,23 @@ class ReclamacaoDAO{
 
         return $stmt->fetchObject("ReclamacaoModel");
     }
+
+    public function getAllByStatus($status){
+        $sql = 'SELECT * FROM view_reclamacao WHERE status_reclamacao = ? ';
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $status);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
+
+    public function changeStatus($id, $status){
+        $sql  = "UPDATE Reclamacao SET status = '?' WHERE id = ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $status);
+        $stmt->bindValue(2, $id);
+        $stmt->execute();
+    }
 }
