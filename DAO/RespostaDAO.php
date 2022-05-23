@@ -15,7 +15,18 @@ class RespostaDAO{
         $stmt->bindValue(1, $model->id_funcionario);
         $stmt->bindValue(2, $model->id_reclamacao);
         $stmt->bindValue(3, $model->descricao);
+        $stmt->execute();       
+        
+    }
+
+    public function getById($id){
+        $sql = 'SELECT * FROM Resposta WHERE id_reclamacao = ?';
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
         $stmt->execute();
+
+        return $stmt->fetchObject("RespostaModel");
     }
 
     public function update(){

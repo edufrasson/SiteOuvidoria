@@ -38,7 +38,7 @@ class ReclamacaoDAO{
     }
 
     public function changeStatus($id, $status){
-        $sql  = "UPDATE Reclamacao SET status = '?' WHERE id = ?";
+        $sql  = "UPDATE Reclamacao SET status = ? WHERE id = ?";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $status);

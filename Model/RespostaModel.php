@@ -9,4 +9,10 @@ class RespostaModel{
 
         ($this->id == null) ? $dao->insert($this) : $dao->update($this);
     }
+
+    public function getById($id){
+        $dao = new RespostaDAO();
+
+        return $dao->getById($id);
+    }
 }

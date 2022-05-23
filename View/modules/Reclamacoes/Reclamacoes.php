@@ -72,6 +72,10 @@
               <?php if ($reclamacao->status_reclamacao == "Abertos") : ?>
                 <a href="/responder?id=<?= $reclamacao->id ?>" class="btn btn-success">Responder</a>
               <?php endif ?>
+
+              <?php if ($reclamacao->status_reclamacao == "Pendente") : ?>
+                <a href="/ver_resposta?id=<?= $reclamacao->id ?>" class="btn btn-primary">Ver resposta</a>
+              <?php endif ?>
               <a href="/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
             </div>
           </div>

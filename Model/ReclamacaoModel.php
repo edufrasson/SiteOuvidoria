@@ -4,6 +4,12 @@ class ReclamacaoModel{
     public $id, $descricao, $titulo, $latitude, $longitude;
     public $data_cadastro, $categoria, $status_reclamacao;
 
+    public function changeStatus($id, $status){
+        $dao = new ReclamacaoDAO();
+
+        $dao->changeStatus($id, $status);
+    }
+    
     public function getAll(){
         $dao = new ReclamacaoDAO();
 

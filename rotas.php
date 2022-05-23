@@ -37,6 +37,10 @@ switch($uri_parse){
         RespostaController::save();
     break;
     
+    case "/ver_resposta":
+        RespostaController::ver($_GET['id']);
+    break;    
+    
     // Login
     case '/login':
         LoginController::form();

@@ -19,6 +19,8 @@ class ReclamacaoController extends Controller
 
     public static function responder()
     {
+        parent::isAuthenticated();
+
         $model = new ReclamacaoModel();
 
         if (isset($_GET['id']))
