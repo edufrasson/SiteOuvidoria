@@ -29,7 +29,13 @@ class RespostaDAO{
         return $stmt->fetchObject("RespostaModel");
     }
 
-    public function update(){
-        
+    public function update(RespostaModel $model){
+        $sql = 'UPDATE Resposta SET descricao = ?, data_cadastro = ? WHERE id = ?';
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $model->descricao);
+        $stmt->bindValue(2, $model->data_cadastro);
+        $stmt->bindValue(3, $model->id);
+        $stmt->execute();
     }
 }    

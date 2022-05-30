@@ -7,7 +7,7 @@ class RespostaModel{
     public function save(){
         $dao = new RespostaDAO();
 
-        ($this->id == null) ? $dao->insert($this) : $dao->update($this);
+        (empty($this->id)) ? $dao->insert($this) : $dao->update($this);
     }
 
     public function getById($id){
