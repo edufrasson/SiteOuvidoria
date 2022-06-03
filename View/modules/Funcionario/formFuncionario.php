@@ -14,13 +14,20 @@
         <header>
             <?php include 'View/includes/cabecalho.php' ?>
         </header>
-        <main>
-            <form action="/funcionario/salvar" method="POST">
-                <input type="hidden" value="<?= $model->id ?>" name="id-funcionario" />
-                <input name="nome-funcionario" value="<?= $model->nome ?>" type="text" placeholder="Nome do Funcionário...">
-                <input name="email-funcionario" value="<?= $model->email ?>" type="email" placeholder="Email do Funcionário...">
-                <input name="senha-funcionario" type="password" placeholder="Senha do Funcionário...">
-                <input type="submit" value="Cadastrar Funcionário">
+        <main class="container-sm d-flex justify-content-center">
+            <form class="form" action="/funcionario/salvar" method="POST">
+                <h1>Cadastro de Funcionário</h1>
+                <input class="form-control" type="hidden" value="<?= $model->id ?>" name="id" />
+                <label for="nome">Nome</label><br>
+                <input class="form-control" name="nome" value="<?= $model->nome ?>" type="text" > <br>
+
+                <label for="email">E-mail</label><br>
+                <input class="form-control" name="email" value="<?= $model->email ?>" type="email"><br>
+
+                <label for="senha">Senha</label><br>
+                <input class="form-control" name="senha" type="password" ><br>
+
+                <button class="btn btn-primary"type="submit" > Salvar </button>
             </form>
         </main>
         <?php include 'View/includes/js_config.php' ?>

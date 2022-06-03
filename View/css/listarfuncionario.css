@@ -1,0 +1,12 @@
+.delete{
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+.actions{
+    display: flex;
+    column-gap: 30px;
+}

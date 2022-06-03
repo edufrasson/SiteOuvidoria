@@ -100,7 +100,7 @@
                             <span class="iconify icon" data-icon="bx:message-detail"></span>
                             <br><br>
 
-                            <h2>Responder <span class="badge bg-success">Novo</span></h2>
+                            <h2>Responder</h2>
                             <p>Próximo requerimento (ordenado por urgência).</p>
                             <p><a class="btn btn-primary" href="/reclamacoes">Expandir &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->

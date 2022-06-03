@@ -29,10 +29,10 @@
 
         public static function save() {
             $model = new FuncionarioModel();
-            $model->id = $_POST['id-funcionario'];
-            $model->nome = $_POST['nome-funcionario'];
-            $model->email = $_POST['email-funcionario'];
-            $model->pass = $_POST['senha-funcionario'];
+            $model->id = $_POST['id'];
+            $model->nome = $_POST['nome'];
+            $model->email = $_POST['email'];
+            $model->pass = $_POST['senha'];
             $model->save();
 
             header("Location: /funcionario/listar");
