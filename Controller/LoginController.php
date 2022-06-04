@@ -12,7 +12,25 @@
         }
 
         public static function enviarNovaSenha() {
-            
+
+            try {
+                $dao = new LoginDAO();
+
+                $nova_senha = uniqid();
+                $email = $_POST['email'];
+                $assunto = "Nova Senha do OuvidoriaJahu!";
+                $mensagem = "Sua nova senha foi redefinida para: $nova_senha";
+                $dao->setNewPasswordForUserByEmail($email, $nova_senha);
+
+                $retorno = "Caso seu email esteja em nosso sistema, você acabou de receber uma nova senha.";
+    
+                if(!mail($email, $assunto, $mensagem))
+                    throw new Exception("Desculpe, ocorreu um erro ao tentar enviar o email. Senha gerada: $nova_senha");
+            } catch (Exception $err) {
+                $retorno = $err->getMessage();
+            }
+
+            include "./View/modules/Login/esqueci-senha.php";
         }
 
         public static function processar() {

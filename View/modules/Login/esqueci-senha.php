@@ -17,12 +17,21 @@
                 <p>Não tem problema! Só precisamos que você informe o email que utiliza para logar em sua conta normalmente, e iremos redeefinir sua senha.</p>
 
                 <div class="col-md-12">
-                    <input name="email-username" type="text" class="form-control" id="email" placeholder="name@example.com">
+                    <input name="email" type="text" class="form-control" id="email" placeholder="name@example.com">
                 </div>
                 <br>
+                <?php if(isset($retorno)): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= $retorno ?>
+                    </div>
+                <?php else: ?>
+                    <?= NULL ?>
+                <?php endif; ?>
                 <button type="submit" class="btn btn-lg btn-primary">Enviar nova Senha</button>  <a href="/login">Voltar</a>
             </form>
         </div>
     </main>
+
+    <?php include 'View/includes/js_config.php'; ?>
     </body>
 </html>

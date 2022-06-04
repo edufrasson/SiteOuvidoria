@@ -9,6 +9,15 @@
             $this->conexao = new MySQL();
         }
 
+        function setNewPasswordForUserByEmail($email, $newpassword) {
+            $sql = "UPDATE Funcionario SET senha = ? WHERE email = ?";
+            
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, sha1($newpassword));
+            $stmt->bindValue(2, $email);
+            $stmt->execute();
+        }
+
         function selectByUserForLogin(LoginModel $model) {
             $sql = "SELECT id, nome, email, senha FROM Funcionario WHERE senha = ? AND nome = ? OR email = ?";
 
