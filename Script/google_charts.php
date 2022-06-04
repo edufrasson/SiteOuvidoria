@@ -18,8 +18,8 @@
                 }
                 
             };
-            var chart = new google.visualization.PieChart(document.getElementById("columnchart12"));
+            var chart = new google.visualization.PieChart(document.getElementById("columnchart1"));
             chart.draw(data,options);
         }
 
-    </script>
+</script>

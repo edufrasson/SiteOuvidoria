@@ -122,7 +122,7 @@
 
                             <h2>Estatísticas</h2>
                             <p>Movimento, tráfego e disposição de dados.</p>
-                            <p><a class="btn btn-primary" href="..\..\SiteOuvidoriaJau\Estatisticas\TelaEstatisticas.html">Expandir &raquo;</a></p>
+                            <p><a class="btn btn-primary" href="/estatisticas">Expandir &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
 
                     </div><!-- /.row -->
