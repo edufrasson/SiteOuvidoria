@@ -51,16 +51,16 @@
       <?php foreach ($arr_reclamacoes as $reclamacao) : ?>
         <div class="card">
           <div class="card-header">
-            <h1 class="title">
+            <h3 class="title">
               <?= $reclamacao->titulo ?>
-            </h1>
+            </h3>
 
           </div>
 
           <div class="card-body">
-            <h4 class="subtitle">
+            <h6 class="subtitle">
               <?= $reclamacao->categoria ?>
-            </h4>
+            </h6>
           </div>
 
           <div class="card-footer">

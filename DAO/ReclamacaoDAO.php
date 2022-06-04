@@ -45,4 +45,18 @@ class ReclamacaoDAO{
         $stmt->bindValue(2, $id);
         $stmt->execute();
     }
+
+    /* Funções utilizadas na página estatística  */
+
+    public function getCountByStatus(){
+        $sql = "SELECT * FROM total_reclamacoes_por_status";
+
+        $stmt = $this->conexao->prepare($sql);   
+        $stmt->execute();
+
+        while($d = $stmt->fetchObject())
+            $arr_dados[] = $d;
+
+        return $arr_dados;    
+    }
 }

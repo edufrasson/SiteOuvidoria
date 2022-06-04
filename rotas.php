@@ -61,7 +61,7 @@ switch($uri_parse){
 
     // Outros
     case '/estatisticas':
-        include 'View/modules/Estatisticas/Estatisticas.php';
+        EstatisticaController::index();
     break;
 
     case '/historico':
