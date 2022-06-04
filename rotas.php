@@ -76,6 +76,10 @@ switch($uri_parse){
         include 'View/modules/Respostas/ResponderSugestao.php';
     break;
 
+    case "/esquecia-a-senha":
+
+    break;
+
     default:
         header("Location: /login");
     break;
