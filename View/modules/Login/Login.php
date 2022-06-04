@@ -24,6 +24,7 @@
                 <div class="form-floating">
                     <input name="senha" type="password" class="form-control" id="Senha" placeholder="Password">
                     <label for="floatingPassword">Senha</label>
+                    <a href="/esquecia-a-senha">Esqueci minha senha</a>
                 </div>
 
                 <div class="checkbox mb-3">
