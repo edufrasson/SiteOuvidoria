@@ -7,6 +7,14 @@
             //parent::render("Login/Login");
         }
 
+        public static function esqueciSenha() {
+            parent::render("Login/esqueci-senha");
+        }
+
+        public static function enviarNovaSenha() {
+            
+        }
+
         public static function processar() {
             $model = new LoginModel();
             $model->nome = $_POST['email-username'];

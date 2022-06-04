@@ -54,6 +54,14 @@ switch($uri_parse){
         LoginController::logout();
     break;
 
+    case "/esquecia-a-senha":
+        LoginController::esqueciSenha();
+    break;
+
+    case "/enviar-nova-senha":
+        LoginController::enviarNovaSenha();
+    break;
+
     // Home
     case '/home':
         HomeController::ViewHome();
@@ -74,10 +82,6 @@ switch($uri_parse){
 
     case '/responder/sugestao':
         include 'View/modules/Respostas/ResponderSugestao.php';
-    break;
-
-    case "/esquecia-a-senha":
-
     break;
 
     default:
