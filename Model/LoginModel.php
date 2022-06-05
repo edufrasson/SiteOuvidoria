@@ -1,7 +1,6 @@
 <?php
     class LoginModel {
-        public $id, $nome, $email, $senha, $status_lembrar = false;
-        public $user_cookie;
+        public $id, $email, $senha, $status_lembrar = false;
 
         public function authenticateLogin() {
             $dao = new LoginDAO();
@@ -10,8 +9,7 @@
             if($dados_do_usuario) {
                 $_SESSION['usuario'] = $dados_do_usuario;
                 if($this->status_lembrar) {
-                    ($this->nome == null) ? $this->user_cookie = $this->email : $this->user_cookie = $this->nome;
-                    self::remember($this->nome);
+                    self::remember($this->email);
                 }
                 header("Location: /home");
             } else {
@@ -21,7 +19,7 @@
 
         private static function remember($user) {
             $validade = strtotime("+1 month");
-            setcookie("funcionario_user", $user, $validade, "/", "", false, true);
+            setcookie("funcionario_email", $user, $validade, "/", "", false, true);
         }
 
         /*private static function forget() {

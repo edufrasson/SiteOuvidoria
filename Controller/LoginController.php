@@ -2,7 +2,7 @@
     class LoginController extends Controller {
         
         public static function form() {
-            $usuario = (isset($_COOKIE['funcionario_user'])) ? $_COOKIE['funcionario_user'] : "";
+            $usuario = (isset($_COOKIE['funcionario_email'])) ? $_COOKIE['funcionario_email'] : "";
             include "./View/modules/Login/Login.php";
             //parent::render("Login/Login");
         }
@@ -12,7 +12,6 @@
         }
 
         public static function enviarNovaSenha() {
-
             try {
                 $dao = new LoginDAO();
 
@@ -35,8 +34,7 @@
 
         public static function processar() {
             $model = new LoginModel();
-            $model->nome = $_POST['email-username'];
-            $model->email = $_POST['email-username'];
+            $model->email = $_POST['email'];
             $model->senha = $_POST['senha'];
             $model->status_lembrar = isset($_POST['lembrar-de-mim']);
             $model->authenticateLogin();

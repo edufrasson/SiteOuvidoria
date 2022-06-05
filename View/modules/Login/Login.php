@@ -17,8 +17,8 @@
                 <h1 class="h3 mb-3 fw-normal">Ouvidoria Jahu - Login</h1>
 
                 <div class="form-floating" class="col-md-6 offset-md-3">
-                    <input value="<?= $usuario ?>" name="email-username" type="text" class="form-control" id="email" placeholder="name@example.com">
-                    <label for="floatingInput">Email ou Username</label>
+                    <input value="<?= $usuario ?>" name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
                 </div>
                 <br>
                 <div class="form-floating">
