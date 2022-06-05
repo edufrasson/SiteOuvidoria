@@ -44,7 +44,7 @@
             if(isset($_GET['sair'])) {
                 unset($_SESSION['usuario']);
                 $validade = time() - 3600;
-                setcookie("funcionario_user", "", $validade, "/", "", false, true);
+                setcookie("funcionario_email", "", $validade, "/", "", false, true);
                 header("Location: /login");
             }
         }
