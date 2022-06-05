@@ -28,14 +28,14 @@
 
       <h2>Denúncia <span class="badge bg-danger">Novo</span></h2>
       <fieldset disabled>
-        <input type="text" class="form-control" id="cidadao" placeholder="name@example.com" value="<?= $reclamacao->titulo ?>">
+        <input type="text" class="form-control" id="cidadao" placeholder="name@example.com" value="<?= $dados_resposta->titulo ?>">
         <div id="requerimento" class="form-floating">
-          <textarea class="form-control" id="requerimento" style="height: 100px"><?= $reclamacao->descricao ?></textarea>
+          <textarea class="form-control" id="requerimento" style="height: 100px"><?= $dados_resposta->descricao ?></textarea>
         </div>
       </fieldset>
       <fieldset disabled>
         <div class="mb-3">
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Status: <?= $reclamacao->status_reclamacao ?>">
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Status: <?= $dados_resposta->status_reclamacao ?>">
         </div>
       </fieldset>
     </form>
