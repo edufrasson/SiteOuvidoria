@@ -33,7 +33,9 @@
 	                    <input value="<?= $_SESSION['usuario']->email ?>" name="email-funcionario" type="email" class="form-control" id="email-funcionario">
                     </fieldset>
 	            </div>
-                
+                <?php if(isset($model->retorno)): ?>
+                    <?= $model->retorno ?>
+                <?php endif ?>
                 <div class="container px-3 py-4" id="senha">
                     <h4 class="text-center pb-2 border-bottom">Alterar senha</h4>
                 </div>

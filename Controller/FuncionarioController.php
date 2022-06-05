@@ -23,8 +23,9 @@
 
         public static function myAccount(){
             parent::isAuthenticated();
+            $model = new FuncionarioModel();
 
-            parent::render('MeuPerfil/MeuPerfil');
+            include "./View/modules/MeuPerfil/MeuPerfil.php";
         }
 
         public static function save() {
