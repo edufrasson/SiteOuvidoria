@@ -45,4 +45,16 @@
 
             header("Location: /funcionario/listar");
         }
+
+        public static function alterarSenha() {
+            $model = new FuncionarioModel();
+            $dao = new FuncionarioDAO();
+            
+            $model->nova_senha = $_POST['nova-senha'];
+            $model->confirmar_nova_senha = $_POST['confirmar-senha'];
+            $model->senha_antiga_digitada = sha1($_POST['senha-antiga']);
+            $model->verifyPassword( (int) $_POST['id-funcionario']);
+
+            header("Location: /meu_perfil");
+        }
     }

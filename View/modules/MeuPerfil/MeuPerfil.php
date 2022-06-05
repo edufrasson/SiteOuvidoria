@@ -17,9 +17,10 @@
 
         <!-- Main -->
         <main class="form-nome container" class="position-relative">  
-            <form method="POST" action="" id="form-nome" class="row g-3 position-absolute top-50 start-50 translate-middle">
-                <input type="hidden" value="<?= $id ?>" name="id-funcionario" />  
+            <form method="POST" action="/funcionario/alterar-senha" id="form-nome" class="row g-3 position-absolute top-50 start-50 translate-middle">
+                <input type="hidden" value="<?= $_SESSION['usuario']->id ?>" name="id-funcionario" />  
                 <h1 class="text-center">Meu Perfil</h1>
+
                 <div class="col-md-12">
                     <label for="nome-funcionario" class="form-label">Nome</label>
                     <fieldset disabled>
@@ -32,20 +33,21 @@
 	                    <input value="<?= $_SESSION['usuario']->email ?>" name="email-funcionario" type="email" class="form-control" id="email-funcionario">
                     </fieldset>
 	            </div>
+                
                 <div class="container px-3 py-4" id="senha">
                     <h4 class="text-center pb-2 border-bottom">Alterar senha</h4>
                 </div>
                 <div class="col-md-6">
-                    <input name="nova-senha-funcionario" type="password" placeholder="Nova senha" class="form-control" id="nova-senha-funcionario">
+                    <input name="nova-senha" type="password" placeholder="Nova senha" class="form-control" id="nova-senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <input name="confirmar-senha-funcionario" type="password" placeholder="Confirmar Senha" class="form-control" id="confirmar-senha-funcionario">
+                    <input name="confirmar-senha" type="password" placeholder="Confirmar Senha" class="form-control" id="confirmar-senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <input name="senha-antiga-funcionario" type="password" placeholder="Senha antiga" class="form-control" id="senha-funcionario">
+                    <input name="senha-antiga" type="password" placeholder="Senha antiga" class="form-control" id="senha-funcionario">
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-outline-success">Alterar senha</button>
+                    <button type="submit" class="btn btn-outline-success">Alterar senha</button>
                 </div>
             </form>
         </main>

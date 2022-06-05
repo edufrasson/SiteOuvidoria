@@ -66,4 +66,23 @@
             $stmt->execute();
 
         }
+
+        public function selectPasswordOfFuncionarioById(int $id) {
+            $sql = "SELECT senha FROM Funcionario WHERE id = ?";
+
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+
+            return $stmt->fetchObject();
+        }
+
+        public function updatePasswordOfFuncionario(int $id, $senha) {
+            $sql = "UPDATE Funcionario SET senha = ? WHERE id = ?";
+
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, sha1($senha));
+            $stmt->bindValue(2, $id);
+            $stmt->execute();
+        }
     }

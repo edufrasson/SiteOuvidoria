@@ -23,6 +23,10 @@ switch($uri_parse){
         FuncionarioController::myAccount();
     break;
 
+    case "/funcionario/alterar-senha":
+        FuncionarioController::alterarSenha();
+    break;
+
     // Rotas para reclamações
     case "/reclamacoes":
         ReclamacaoController::index();
