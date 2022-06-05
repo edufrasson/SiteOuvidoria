@@ -24,10 +24,13 @@
                 <label for="email">E-mail</label><br>
                 <input class="form-control" name="email" value="<?= $model->email ?>" type="email"><br>
 
-                <label for="senha">Senha</label><br>
-                <input class="form-control" name="senha" type="password" ><br>
-
-                <button class="btn btn-primary"type="submit" > Salvar </button>
+                <?php if(!isset($_GET['id'])): ?>
+                    <label for="senha">Senha</label><br>
+                    <input class="form-control" name="senha" type="password" ><br>
+                <?php endif ?>
+                
+                <?php $msg = (!isset($_GET['id'])) ? "Cadastrar" : "Atualizar" ?>
+                <button class="btn btn-primary"type="submit" ><?= $msg ?></button>
             </form>
         </main>
         <?php include 'View/includes/js_config.php' ?>
