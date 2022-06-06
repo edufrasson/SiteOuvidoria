@@ -4,7 +4,7 @@
         public $id, $nome, $email, $pass;
         public $arr_funcionarios;
         public $nova_senha, $confirmar_nova_senha, $senha_antiga_digitada, $senha_real;
-        public $retorno = NULL;
+        public $retorno = "teste";
 
         public function save() {
             $dao = new FuncionarioDAO();
@@ -34,7 +34,7 @@
 
                 if($this->senha_antiga_digitada == $this->senha_real->senha) {
                     $dao->updatePasswordOfFuncionario( (int) $id, $this->nova_senha);
-                    $this->retorno = "Senha alterada com sucesso!";
+                    return "Senha alterada com sucesso!";
                 } else {
                     $this->retorno = "Senha antiga incorreta.";
                 }

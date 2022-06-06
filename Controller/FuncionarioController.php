@@ -24,6 +24,7 @@
         public static function myAccount(){
             parent::isAuthenticated();
             $model = new FuncionarioModel();
+            $retorno = $model->verifyPassword($_SESSION['usuario']->id);
 
             include "./View/modules/MeuPerfil/MeuPerfil.php";
         }
@@ -49,7 +50,6 @@
 
         public static function alterarSenha() {
             $model = new FuncionarioModel();
-            $dao = new FuncionarioDAO();
             
             $model->nova_senha = $_POST['nova-senha'];
             $model->confirmar_nova_senha = $_POST['confirmar-senha'];
