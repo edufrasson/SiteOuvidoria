@@ -36,11 +36,11 @@
                     $dao->updatePasswordOfFuncionario( (int) $id, $this->nova_senha);
                     return "Senha alterada com sucesso!";
                 } else {
-                    $this->retorno = "Senha antiga incorreta.";
+                    return "Senha antiga incorreta.";
                 }
                 
             } else {
-                $this->retorno = "Nova senha e Confirmar senha não são iguais.";
+                return "Nova senha e Confirmar senha não são iguais.";
             }
         }
     }
