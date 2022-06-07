@@ -53,11 +53,11 @@
           <div class="card-header">
             <h3 class="title">
               <?= $reclamacao->titulo ?>
-            </h3>
-
+            </h3>      
           </div>
 
           <div class="card-body">
+            <image class="img-fluid" src="data:image/png;base64, <?= $reclamacao->foto ?>" />
             <h6 class="subtitle">
               <?= $reclamacao->categoria ?>
             </h6>

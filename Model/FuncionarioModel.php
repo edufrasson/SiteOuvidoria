@@ -4,7 +4,6 @@
         public $id, $nome, $email, $pass;
         public $arr_funcionarios;
         public $nova_senha, $confirmar_nova_senha, $senha_antiga_digitada, $senha_real;
-        public $retorno = "teste";
 
         public function save() {
             $dao = new FuncionarioDAO();
