@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Sales Chart</title>
+    <title>Estatísticas - OuvidoriaJahu</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     

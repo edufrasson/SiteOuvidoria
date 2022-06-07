@@ -28,4 +28,14 @@ class ReclamacaoController extends Controller
 
         include './View/modules/Respostas/ResponderReclamacao.php';
     }
+
+    public static function historico(){
+        parent::isAuthenticated();
+
+        $model = new ReclamacaoModel();
+
+        $reclamacao = $model->getAll();
+
+        include './View/modules/Historico/Historico.php';
+    }
 }

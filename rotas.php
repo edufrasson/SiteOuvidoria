@@ -77,7 +77,7 @@ switch($uri_parse){
     break;
 
     case '/historico':
-        include 'View/modules/Historico/Historico.php';
+       ReclamacaoController::historico();
     break; 
 
     case '/responder/denuncia':

@@ -112,7 +112,7 @@
 
                             <h2>Histórico</h2>
                             <p>Todos os requerimentos registrados.</p>
-                            <p><a class="btn btn-primary" href="..\..\SiteOuvidoriaJau\Historico\TelaHistorico.html">Expandir &raquo;</a></p>
+                            <p><a class="btn btn-primary" href="/historico">Expandir &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
 
                         <!-- Coluna ESTATÍSTICAS-->
