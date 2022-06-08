@@ -12,9 +12,9 @@ class RespostaController extends Controller{
         $model_reclamacao = new ReclamacaoModel();
 
         if(isset($_GET['id']))
-            $model->getById($_GET['id']);
+            $dados_resposta = $model->getById($_GET['id']);
         
-        $dados_resposta = $model_reclamacao->getById($_GET['id']);
+        $reclamacao = $model_reclamacao->getById($_GET['id']);
 
         include './View/modules/Respostas/ResponderReclamacao.php';    
     }
@@ -32,5 +32,7 @@ class RespostaController extends Controller{
         $model_resposta->save();
 
         $model_reclamacao->changeStatus($_POST['id_reclamacao'], 'P');
+
+        header("Location: /reclamacoes");
     }
 }

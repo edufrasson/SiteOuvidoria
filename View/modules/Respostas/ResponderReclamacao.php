@@ -41,7 +41,7 @@
     </form>
     <form class="form-responder" action="/resposta/save" method="POST">
       <input type="hidden" name="id" class="form-control" value="<?= (isset($dados_resposta)) ? $dados_resposta->id : "" ?>"> 
-      <input type="hidden" value="'<?= $_GET['id'] ?>" name="id_reclamacao">     
+      <input type="hidden" value="<?= $_GET['id'] ?>" name="id_reclamacao">     
       <div class="container px-3 py-4" id="historicos">
         <h2 class="pb-2 border-bottom">Resposta (Adicionar Informações)</h2>
       </div>

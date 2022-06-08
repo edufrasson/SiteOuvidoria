@@ -14,5 +14,6 @@ class RespostaModel{
         $dao = new RespostaDAO();
 
         return $dao->getById($id);
-    }
+    }    
+   
 }
