@@ -36,6 +36,9 @@ switch($uri_parse){
         ReclamacaoController::buscar();
     break;
 
+    case '/reclamacoes/deletar_busca':
+        ReclamacaoController::deletarBusca();
+    break; 
 
     case "/responder":
         ReclamacaoController::responder();
@@ -62,6 +65,10 @@ switch($uri_parse){
     case "/cidadao/buscar":
         CidadaoController::buscar();
     break;
+
+    case '/cidadao/deletar_busca':
+        CidadaoController::deletarBusca();
+    break;    
 
     // Login
     case '/login':
@@ -97,6 +104,8 @@ switch($uri_parse){
     case '/historico':
        ReclamacaoController::historico();
     break; 
+
+  
 
     case '/responder/denuncia':
         include 'View/modules/Respostas/ResponderDenuncia.php';

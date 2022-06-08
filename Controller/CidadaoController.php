@@ -17,4 +17,11 @@
 
             include "./View/modules/Cidadao/listarCidadao.php";    
         }
+
+        public static function deletarBusca(){
+            parent::isAuthenticated();
+            
+            unset($_GET['query']);
+            header("Location: /cidadao/listar");
+        }
     }

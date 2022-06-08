@@ -20,9 +20,14 @@
             <div class="search-bar-container">
                 <form action="/cidadao/buscar" class="form" method="GET">
                     <label for="query">Buscar Cidadão</label><br>
-                    <input type="text" name="query">
+                    <input type="text" name="query" value="<?= (isset($_GET['query'])) ? $_GET['query'] : "" ?>">
                     <button type="submit" style="display: none;">
                     </button>
+                    <?php if(isset($_GET['query'])): ?>
+                        <a class="delete-search text-danger" href="/cidadao/deletar_busca">
+                            <span class="iconify" data-icon="akar-icons:trash-can" data-width="14" data-height="14"></span>
+                        </a>
+                    <?php endif ?>
                 </form>
             </div>
         </div>

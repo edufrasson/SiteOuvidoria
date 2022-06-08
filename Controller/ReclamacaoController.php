@@ -47,6 +47,13 @@ class ReclamacaoController extends Controller
         include './View/modules/Reclamacoes/Reclamacoes.php';    
     }
 
+    public static function deletarBusca(){
+        parent::isAuthenticated();
+        
+        unset($_GET['query']);
+        header("Location: /reclamacoes");
+    }
+
     public static function delete(){
         parent::isAuthenticated();
 
