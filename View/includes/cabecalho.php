@@ -18,17 +18,19 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/cidadao/listar">Cidadãos</a>
                 </li>
-                <li class="nav-item d-flex align-items-center">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Funcionário
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="nav-link text-dark" href="/funcionario/listar">Ver Funcionários</a></li>
-                            <li><a class="nav-link text-dark" href="/funcionario/form">Cadastrar Funcionários</a></li>
-                        </ul>
-                    </div>
-                </li>                       
+                <?php if($_SESSION['usuario']->id == 5): ?>
+                    <li class="nav-item d-flex align-items-center">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Funcionário
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="nav-link text-dark" href="/funcionario/listar">Ver Funcionários</a></li>
+                                <li><a class="nav-link text-dark" href="/funcionario/form">Cadastrar Funcionários</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                <?php endif; ?>                   
             </ul>
             
         </div>
