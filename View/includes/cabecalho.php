@@ -16,7 +16,7 @@
                     <a class="nav-link text-dark" href="/reclamacoes">Reclamações</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="/cidadaos/listar">Cidadãos</a>
+                    <a class="nav-link text-dark" href="/cidadao/listar">Cidadãos</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <div class="dropdown">

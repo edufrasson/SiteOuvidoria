@@ -46,7 +46,7 @@ switch($uri_parse){
     break; 
     
     // Rotas para Cidadão
-    case "/cidadaos/listar":
+    case "/cidadao/listar":
 
     break;
     
