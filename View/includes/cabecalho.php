@@ -15,6 +15,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/reclamacoes">Reclamações</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/cidadaos/listar">Cidadãos</a>
+                </li>
                 <li class="nav-item d-flex align-items-center">
                     <div class="dropdown">
                         <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

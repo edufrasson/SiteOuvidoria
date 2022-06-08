@@ -43,7 +43,12 @@ switch($uri_parse){
     
     case "/ver_resposta":
         RespostaController::ver($_GET['id']);
-    break;    
+    break; 
+    
+    // Rotas para Cidadão
+    case "/cidadaos/listar":
+
+    break;
     
     // Login
     case '/login':
