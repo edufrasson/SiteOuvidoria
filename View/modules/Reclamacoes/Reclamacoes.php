@@ -29,20 +29,33 @@
 
   <!-- Main -->
   <main>
-    <div class="container text-end">
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle text-decoration-none" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          Filtrar
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li><a class="nav-link text-dark" href="?filtrar=Abertos">Reclamações Abertas</a></li>
-          <li><a class="nav-link text-dark" href="?filtrar=Pendente">Reclamações Pendentes</a></li>
-          <li><a class="nav-link text-dark" href="?filtrar=Respondidos">Reclamações Respondidas</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="nav-link text-danger" href="/reclamacoes">Limpar Filtros</a></li>
-        </ul>
+    <div class="container flex options">      
+      <div class="container text-start">
+        <div class="search-bar-container">
+          <form action="/reclamacoes/buscar" class="form" method="GET">
+            <label for="query">Buscar Reclamação</label><br>
+            <input type="text" name="query">
+            <button type="submit" style="display: none;">
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container text-end">
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle text-decoration-none" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtrar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="nav-link text-dark" href="?filtrar=Abertos">Reclamações Abertas</a></li>
+            <li><a class="nav-link text-dark" href="?filtrar=Pendente">Reclamações Pendentes</a></li>
+            <li><a class="nav-link text-dark" href="?filtrar=Respondidos">Reclamações Respondidas</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="nav-link text-danger" href="/reclamacoes">Limpar Filtros</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -53,11 +66,12 @@
           <div class="card-header">
             <h3 class="title">
               <?= $reclamacao->titulo ?>
-            </h3>      
+            </h3>
           </div>
 
           <div class="card-body">
             <image class="img-fluid" src="data:image/png;base64, <?= $reclamacao->foto ?>" />
+            <hr class="hr">
             <h6 class="subtitle">
               <?= $reclamacao->categoria ?>
             </h6>

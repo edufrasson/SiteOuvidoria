@@ -9,6 +9,12 @@ class ReclamacaoModel{
 
         $dao->changeStatus($id, $status);
     }
+
+    public function buscar($dados_busca){
+        $dao = new ReclamacaoDAO();
+
+        return $dao->buscar($dados_busca);
+    }
     
     public function getAll(){
         $dao = new ReclamacaoDAO();
@@ -26,5 +32,11 @@ class ReclamacaoModel{
         $dao = new ReclamacaoDAO();
 
         return $dao->getById($id);
+    }
+
+    public function delete($id){
+        $dao = new ReclamacaoDAO();
+
+        $dao->delete($id);
     }
 }

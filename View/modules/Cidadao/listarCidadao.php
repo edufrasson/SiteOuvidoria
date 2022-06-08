@@ -14,7 +14,7 @@
             <?php include 'View/includes/cabecalho.php' ?>
         </header>
 
-        <main>
+        <main class="container">
             <table class="table">
                 <thead>
                     <tr>
@@ -39,7 +39,7 @@
                     <?php endforeach ?>
                     <?php if (count($model->arr_cidadao) == 0) : ?>
                         <tr>
-                            <td colspan="4">Nenhum funcionário encontrado.</td>
+                            <td colspan="4">Nenhum cidadão encontrado.</td>
                         </tr>
                     <?php endif ?>
                 </tbody>

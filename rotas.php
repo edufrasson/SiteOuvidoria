@@ -32,9 +32,18 @@ switch($uri_parse){
         ReclamacaoController::index();
     break;
 
+    case "/reclamacoes/buscar":
+        ReclamacaoController::buscar();
+    break;
+
+
     case "/responder":
         ReclamacaoController::responder();
     break; 
+
+    case "/deletar":
+        ReclamacaoController::delete();
+    break;    
     
     // Rotas para resposta
     case "/resposta/save":

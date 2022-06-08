@@ -27,6 +27,28 @@ class ReclamacaoDAO{
         return $stmt->fetchObject("ReclamacaoModel");
     }
 
+    public function buscar($dados_busca){
+        $dados = "%" . $dados_busca . "%";
+
+        $sql = "SELECT * FROM view_reclamacao WHERE titulo LIKE ? OR descricao LIKE ? OR categoria LIKE ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $dados);
+        $stmt->bindValue(2, $dados);
+        $stmt->bindValue(3, $dados);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
+
+    public function delete($id){
+        $sql = 'DELETE FROM Reclamacao WHERE id = ?';
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();       
+    }
+
     public function getAllByStatus($status){
         $sql = 'SELECT * FROM view_reclamacao WHERE status_reclamacao = ? ';
 
