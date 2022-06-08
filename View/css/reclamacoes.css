@@ -9,3 +9,15 @@
     margin: 10px;
     width: 350px;
 }
+
+.options{
+    flex-wrap: wrap;
+}
+
+.text-start{
+    width: 50%;
+}
+
+.text-end{
+    width: 50%;
+}

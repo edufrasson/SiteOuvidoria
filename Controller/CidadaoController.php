@@ -8,4 +8,13 @@
 
             include "./View/modules/Cidadao/listarCidadao.php";
         }
+
+        public static function buscar(){
+            parent::isAuthenticated();
+            $model = new CidadaoModel();
+            if(isset($_GET['query']))
+                $model->buscar($_GET['query']);
+
+            include "./View/modules/Cidadao/listarCidadao.php";    
+        }
     }

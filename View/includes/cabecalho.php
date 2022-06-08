@@ -36,8 +36,8 @@
         </div>
         <!-- Dropdown do User -->
         <div class="navbar-brand dropdown text-end p-2 ">
-            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="iconify" data-icon="bx:user" data-width="32" data-height="32"></span>
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle user-name" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="iconify " data-icon="bx:user" data-width="32" data-height="32"></span>
                <?= $_SESSION['usuario']->nome ?>
             </a>
             <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">

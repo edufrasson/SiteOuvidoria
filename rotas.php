@@ -59,6 +59,10 @@ switch($uri_parse){
         CidadaoController::listarCidadao();
     break;
     
+    case "/cidadao/buscar":
+        CidadaoController::buscar();
+    break;
+
     // Login
     case '/login':
         LoginController::form();

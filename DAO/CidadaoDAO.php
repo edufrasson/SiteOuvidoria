@@ -16,4 +16,19 @@
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         }
+
+        public function buscar($dados_busca){
+            $dados = "%" . $dados_busca . "%";
+
+            $sql = "SELECT nome, cpf, email, telefone, sexo, 
+                    date_format(data_cadastro, '%d/%m/%Y') AS data_cadastro 
+                    FROM Cidadao WHERE nome LIKE ? OR email LIKE ?";
+    
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(1, $dados);
+            $stmt->bindValue(2, $dados);            
+            $stmt->execute();
+    
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
     }
