@@ -47,7 +47,7 @@ switch($uri_parse){
     
     // Rotas para Cidadão
     case "/cidadao/listar":
-
+        CidadaoController::listarCidadao();
     break;
     
     // Login
