@@ -30,7 +30,11 @@
       <fieldset disabled>
         <input type="text" class="form-control" id="cidadao" placeholder="name@example.com" value="<?= $reclamacao->titulo ?>">
         <div id="requerimento" class="form-floating">
-          <textarea class="form-control" id="requerimento" style="height: 100px"><?= $reclamacao->descricao ?></textarea>
+        <img class="img-fluid"src="data:image/png;base64, <?= $reclamacao->foto ?>" alt="foto-reclamacao"> 
+          <textarea class="form-control" id="requerimento" style="height: 100px">
+            
+          <?= $reclamacao->descricao ?>
+          </textarea>
         </div>
       </fieldset>
       <fieldset disabled>
