@@ -24,7 +24,6 @@
         public static function myAccount(){
             parent::isAuthenticated();
             $model = new FuncionarioModel();
-            $retorno = $model->verifyPassword($_SESSION['usuario']->id);
 
             include "./View/modules/MeuPerfil/MeuPerfil.php";
         }

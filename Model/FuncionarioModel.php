@@ -33,13 +33,11 @@
 
                 if($this->senha_antiga_digitada == $this->senha_real->senha) {
                     $dao->updatePasswordOfFuncionario( (int) $id, $this->nova_senha);
-                    return "Senha alterada com sucesso!";
                 } else {
-                    return "Senha antiga incorreta.";
+                    // ...Tratar uma execesão
                 }
-                
             } else {
-                return "Nova senha e Confirmar senha não são iguais.";
+                // ...Tratar uma excesão
             }
         }
     }
