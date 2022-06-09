@@ -16,7 +16,8 @@
         </header>
         <main class="container-sm d-flex justify-content-center">
             <form class="form" action="/funcionario/salvar" method="POST">
-                <h1>Cadastro de Funcionário</h1>
+                <?php $titulo = (!isset($_GET['id']) ? "Cadastro de Funcionário" : "Atualizar Funcionário") ?>
+                <h1><?= $titulo ?></h1>
                 <input class="form-control" type="hidden" value="<?= $model->id ?>" name="id" />
                 <label for="nome">Nome</label><br>
                 <input class="form-control" name="nome" value="<?= $model->nome ?>" type="text" > <br>
