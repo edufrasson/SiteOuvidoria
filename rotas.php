@@ -23,6 +23,27 @@ switch($uri_parse){
         FuncionarioController::myAccount();
     break;
 
+    //Rotas para Bairro
+    
+    case "/bairro/form":
+        BairroController::form();
+    break;
+    
+    case "/bairro/listar":
+        BairroController::index();
+    break;
+
+    case "/bairro/salvar":
+        BairroController::save();
+    break;
+
+    case "/bairro/delete":
+        BairroController::delete();
+    break;
+    
+
+    // Rotas para Categoria
+
     // Rotas para reclamações
     case "/reclamacoes":
         ReclamacaoController::index();
