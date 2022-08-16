@@ -1,0 +1,16 @@
+@import url(./global.css);
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-dados-sugestao, .form-responder {
+    width: 70%;
+}
+
+.form-dados-sugestao h2, .form-responder div h2 {
+    text-align: center;
+}

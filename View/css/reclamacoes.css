@@ -1,0 +1,11 @@
+@import url(global.css);
+
+.container{
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 10px;
+    width: 350px;
+}

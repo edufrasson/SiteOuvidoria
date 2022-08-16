@@ -1,0 +1,16 @@
+@import url(./global.css);
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-dados-denuncia, .form-responder {
+    width: 70%;
+}
+
+.form-dados-denuncia h2, .form-responder div h2 {
+    text-align: center;
+}
