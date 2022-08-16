@@ -9,14 +9,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item m-3">
                     <a class="nav-link active text-dark" aria-current="page" href="/home">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item m-3">
                     <a class="nav-link text-dark" href="/reclamacoes">Reclamações</a>
                 </li>
                                      
-                <li class="nav-item d-flex align-items-center">
+                <li class="nav-item d-flex align-items-center m-3">
                     <div class="dropdown">
                         <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             Cadastrar
@@ -27,7 +27,20 @@
                             <li><a class="nav-link text-dark" href="/categoria/form">Categoria</a></li>
                         </ul>
                     </div>
-                </li>                       
+                </li> 
+                
+                <li class="nav-item d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Listar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="nav-link text-dark" href="/funcionario/listar">Funcionários</a></li>
+                            <li><a class="nav-link text-dark" href="/bairro/listar">Bairro</a></li>
+                            <li><a class="nav-link text-dark" href="/categoria/listar">Categoria</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
