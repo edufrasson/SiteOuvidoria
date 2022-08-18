@@ -55,23 +55,29 @@
         </thead>
         <tbody>
           <?php foreach($arr_reclamacoes as $reclamacao): ?>
-              <tr>
-                <th scope="row"><?= $reclamacao->id ?></th>
-                <td><?= $reclamacao->titulo ?></td>
-                <td><?= $reclamacao->categoria ?></td>
-                <td><?= $reclamacao->data_cadastro ?></td>
-                <td><?= $reclamacao->status_reclamacao ?></td>
-                <td>
-                <?php if ($reclamacao->status_reclamacao == "Abertos") : ?>
-                  <a href="/responder?id=<?= $reclamacao->id ?>" class="btn btn-success">Responder</a>
-                  <?php endif ?>
-                  
-                  <?php if ($reclamacao->status_reclamacao == "Pendente") : ?>
-                    <a href="/ver_resposta?id=<?= $reclamacao->id ?>" class="btn btn-primary">Ver resposta</a>
-                  <?php endif ?>
-                  <a href="/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
-                </td>
-              </tr>
+            <?php 
+              $class_cor = "table-warning";
+              if($reclamacao->status_reclamacao == "Abertos") {
+                $class_cor = "table-success";
+              } 
+            ?>
+            <tr>
+              <th scope="row" class="<?= $class_cor ?>"><?= $reclamacao->id ?></th>
+              <td class="<?= $class_cor ?>"><?= $reclamacao->titulo ?></td>
+              <td class="<?= $class_cor ?>"><?= $reclamacao->categoria ?></td>
+              <td class="<?= $class_cor ?>"><?= $reclamacao->data_cadastro ?></td>
+              <td class="<?= $class_cor ?>"><?= $reclamacao->status_reclamacao ?></td>
+              <td class="<?= $class_cor ?>">
+              <?php if ($reclamacao->status_reclamacao == "Abertos") : ?>
+                <a href="/responder?id=<?= $reclamacao->id ?>" class="btn btn-success">Responder</a>
+                <?php endif ?>
+                
+                <?php if ($reclamacao->status_reclamacao == "Pendente") : ?>
+                  <a href="/ver_resposta?id=<?= $reclamacao->id ?>" class="btn btn-primary">Ver resposta</a>
+                <?php endif ?>
+                <a href="/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
+              </td>
+            </tr>
           <?php endforeach ?>
           <?php if(count($arr_reclamacoes) == 0): ?>
               <tr>
