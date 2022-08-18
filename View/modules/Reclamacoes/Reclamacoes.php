@@ -21,13 +21,8 @@
 </head>
 
 <body>
-  <!--
-      * Realizando a inclusão de um arquivo externo de php, onde é responsavel por exibir o código HTML do
-        cabeçalho da nossa página.
-    -->
   <?php include "View/includes/cabecalho.php" ?>
 
-  <!-- Main -->
   <main>
     <div class="container text-end">
       <div class="dropdown">
@@ -46,47 +41,48 @@
       </div>
     </div>
 
-    <div class="container flex">
-
-      <?php foreach ($arr_reclamacoes as $reclamacao) : ?>
-        <div class="card">
-          <div class="card-header">
-            <h1 class="title">
-              <?= $reclamacao->titulo ?>
-            </h1>
-
-          </div>
-
-          <div class="card-body">
-            <h4 class="subtitle">
-              <?= $reclamacao->categoria ?>
-            </h4>
-          </div>
-
-          <div class="card-footer">
-            <h5 class="status">
-              Status: <?= $reclamacao->status_reclamacao ?>
-            </h5>
-            <hr class="hr">
-            <div class="actions d-flex justify-content-between">
-              <?php if ($reclamacao->status_reclamacao == "Abertos") : ?>
-                <a href="/responder?id=<?= $reclamacao->id ?>" class="btn btn-success">Responder</a>
-              <?php endif ?>
-
-              <?php if ($reclamacao->status_reclamacao == "Pendente") : ?>
-                <a href="/ver_resposta?id=<?= $reclamacao->id ?>" class="btn btn-primary">Ver resposta</a>
-              <?php endif ?>
-              <a href="/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
-            </div>
-          </div>
-        </div>
-      <?php endforeach ?>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Data Cadastro</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach($arr_reclamacoes as $reclamacao): ?>
+              <tr>
+                <th scope="row"><?= $reclamacao->id ?></th>
+                <td><?= $reclamacao->titulo ?></td>
+                <td><?= $reclamacao->categoria ?></td>
+                <td><?= $reclamacao->data_cadastro ?></td>
+                <td><?= $reclamacao->status_reclamacao ?></td>
+                <td>
+                <?php if ($reclamacao->status_reclamacao == "Abertos") : ?>
+                  <a href="/responder?id=<?= $reclamacao->id ?>" class="btn btn-success">Responder</a>
+                  <?php endif ?>
+                  
+                  <?php if ($reclamacao->status_reclamacao == "Pendente") : ?>
+                    <a href="/ver_resposta?id=<?= $reclamacao->id ?>" class="btn btn-primary">Ver resposta</a>
+                  <?php endif ?>
+                  <a href="/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
+                </td>
+              </tr>
+          <?php endforeach ?>
+          <?php if(count($arr_reclamacoes) == 0): ?>
+              <tr>
+                  <td colspan="4">Nenhum funcionário encontrado.</td>
+              </tr>
+          <?php endif ?>
+        </tbody>
+      </table>
     </div>
   </main>
 
-  <!--
-      * Realizando a inclussão das configurações básica para o Bootstrap funcionar.
-    -->
   <?php include 'View/includes/js_config.php' ?>
 </body>
 
