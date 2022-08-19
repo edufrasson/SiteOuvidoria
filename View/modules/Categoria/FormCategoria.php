@@ -7,7 +7,7 @@
         <link href="./../../../View/css/global.css" rel="stylesheet">
         <link href="./../../../View/css/cadastrarfuncionario.css" rel="stylesheet">
         <?php include 'View/includes/css_config.php' ?>
-        <title>Cadastrar Bairro - OuvidoriaJahu</title>
+        <title>Cadastrar Categoria - OuvidoriaJahu</title>
     </head>
 
     <body>
@@ -16,12 +16,12 @@
         </header>
         <br>
         <main class="container">
-            <h2>Cadastro de Bairros: </h3>
-            <form class="form" action="/bairro/salvar" method="POST">                
+            <h2>Cadastro de Categorias: </h2>
+            <form class="form" action="/categoria/salvar" method="POST">                
                 <input class="form-control" type="hidden" value="<?= $model->id ?>" name="id" />
 
-                <label for="nome">Nome do Bairro: </label>
-                <input class="form-control" name="nome" value="<?= $model->nome ?>" type="text" >
+                <label for="descricao">Descrição da Categoria: </label>
+                <input class="form-control" name="descricao" value="<?= $model->descricao ?>" type="text" >
                  <br>                 
                 <input class="btn btn-primary" type="submit" value="Salvar">
             </form>

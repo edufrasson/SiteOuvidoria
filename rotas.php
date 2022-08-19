@@ -44,6 +44,22 @@ switch($uri_parse){
 
     // Rotas para Categoria
 
+    case "/categoria/form":
+        CategoriaController::form();
+    break;
+    
+    case "/categoria/listar":
+        CategoriaController::index();
+    break;
+
+    case "/categoria/salvar":
+        CategoriaController::save();
+    break;
+
+    case "/categoria/delete":
+        CategoriaController::delete();
+    break;
+
     // Rotas para reclamações
     case "/reclamacoes":
         ReclamacaoController::index();

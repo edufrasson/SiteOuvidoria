@@ -1,6 +1,6 @@
 <?php
 
-class BairroDAO{
+class CategoriaDAO{
     public $conexao;
         public function __construct()
         {
@@ -9,19 +9,19 @@ class BairroDAO{
             $this->conexao = new MySQL();
         }
         
-        public function insert(BairroModel $model) {
+        public function insert(CategoriaModel $model) {
 
-            $sql = "INSERT INTO Bairro (nome, data_cadastro) VALUES (?, CURRENT_TIMESTAMP())";
+            $sql = "INSERT INTO Categoria (descricao, data_cadastro) VALUES (?, CURRENT_TIMESTAMP())";
 
             $stmt = $this->conexao->prepare($sql);
-            $stmt->bindValue(1, $model->nome);           
+            $stmt->bindValue(1, $model->descricao);                      
             $stmt->execute();
             
         }
 
         public function getAllRows() {
 
-            $sql = "SELECT * FROM Bairro";
+            $sql = "SELECT * FROM Categoria";
 
             $stmt = $this->conexao->prepare($sql);
             $stmt->execute();
@@ -32,19 +32,19 @@ class BairroDAO{
 
         public function getById(int $id) {
 
-            $sql = "SELECT * FROM Bairro WHERE id = ?";
+            $sql = "SELECT * FROM Categoria WHERE id = ?";
 
             $stmt = $this->conexao->prepare($sql);
             $stmt->bindValue(1, $id);
             $stmt->execute();
 
-            return $stmt->fetchObject("BairroModel");
+            return $stmt->fetchObject("CategoriaModel");
 
         }
 
         public function delete(int $id) {
 
-            $sql = "DELETE FROM Bairro WHERE id = ?";
+            $sql = "DELETE FROM Categoria WHERE id = ?";
             
             $stmt = $this->conexao->prepare($sql);
             $stmt->bindValue(1, $id);
@@ -52,12 +52,12 @@ class BairroDAO{
 
         }
 
-        public function update(BairroModel $model) {
+        public function update(CategoriaModel $model) {
 
-            $sql = "UPDATE Bairro SET nome = ?, data_cadastro = ? WHERE id = ?";
+            $sql = "UPDATE Categoria SET descricao = ?, data_cadastro = ? WHERE id = ?";
 
             $stmt = $this->conexao->prepare($sql);
-            $stmt->bindValue(1, $model->nome);
+            $stmt->bindValue(1, $model->descricao);
             $stmt->bindValue(2, $model->data_cadastro);            
             $stmt->bindValue(3, $model->id);
 
