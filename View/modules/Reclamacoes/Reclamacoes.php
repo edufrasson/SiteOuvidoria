@@ -75,7 +75,7 @@
                 <?php if ($reclamacao->status_reclamacao == "Pendente") : ?>
                   <a href="/ver_resposta?id=<?= $reclamacao->id ?>" class="btn btn-primary">Ver resposta</a>
                 <?php endif ?>
-                <a href="/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
+                <a href="/reclamacoes/deletar?id=<?= $reclamacao->id ?>" class="btn btn-danger">Deletar</a>
               </td>
             </tr>
           <?php endforeach ?>

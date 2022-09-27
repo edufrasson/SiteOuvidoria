@@ -1,5 +1,9 @@
 <?php
 
+namespace App\DAO;
+use App\Model\RespostaModel;
+use \PDO;
+
 class RespostaDAO{
     private $conexao;
 

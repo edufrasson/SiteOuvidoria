@@ -1,9 +1,12 @@
 <?php
-    class HomeController extends Controller {
+namespace App\Controller;
 
-        public static function ViewHome() {
-            parent::isAuthenticated();
-            parent::render("Home/Home");
-        } 
-        
+class HomeController extends Controller
+{
+
+    public static function ViewHome()
+    {
+        parent::isAuthenticated();
+        parent::render("Home/Home");
     }
+}

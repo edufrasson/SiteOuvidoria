@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+use App\DAO\RespostaDAO;
+
 class RespostaModel{
     public $id, $id_funcionario, $id_reclamacao;
     public $descricao, $data_cadastro;

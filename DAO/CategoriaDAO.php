@@ -1,10 +1,13 @@
 <?php
 
+namespace App\DAO;
+use App\Model\CategoriaModel;
+use \PDO;
+
 class CategoriaDAO{
     public $conexao;
         public function __construct()
-        {
-            include_once 'MySQL.php';
+        {          
     
             $this->conexao = new MySQL();
         }

@@ -1,5 +1,9 @@
 <?php 
 
+namespace App\Controller;
+use App\Model\BairroModel;
+
+
 class BairroController extends Controller{
     public static function form() 
         {
@@ -7,18 +11,19 @@ class BairroController extends Controller{
 
             $model = new BairroModel();
 
-            if(isset($_GET['id'])) $model = $model->getById( (int) $_GET['id'] );
+            if(isset($_GET['id'])) $model = $model->getById( (int) $_GET['id'] );           
 
-            parent::render('Bairro/FormBairro', $model);
+            $model_bairro = new BairroModel();
+            $model_bairro->getAllRows(); 
+
+            include 'View/modules/Bairro/FormBairro.php';
         }
 
         public static function index() {
             parent::isAuthenticated();
 
-            $model = new BairroModel();
-            $model->getAllRows();
-
-            include './View/modules/Bairro/ListarBairro.php';
+            $model_bairro = new BairroModel();
+            $model_bairro->getAllRows();            
         }
 
         public static function myAccount(){

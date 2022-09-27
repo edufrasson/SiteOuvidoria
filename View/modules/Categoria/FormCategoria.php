@@ -15,6 +15,7 @@
             <?php include 'View/includes/cabecalho.php' ?>
         </header>
         <br>
+
         <main class="container">
             <h2>Cadastro de Categorias: </h2>
             <form class="form" action="/categoria/salvar" method="POST">                
@@ -25,6 +26,35 @@
                  <br>                 
                 <input class="btn btn-primary" type="submit" value="Salvar">
             </form>
+        </main>
+        <br>
+
+        <main class="container">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Data de Cadastro</th>
+                    <th scope="col">Ação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($model_categoria->arr_categorias as $item): ?>
+                        <tr>
+                            <th scope="row"><?= $item->id ?></th>
+                            <td><?= $item->descricao ?></td>
+                            <td><?= $item->data_cadastro ?></td>
+                            <td><a href="/categoria/delete?id=<?= $item->id ?>">X</a> <a href="/categoria/form?id=<?= $item->id ?>">Editar</a></td>
+                        </tr>
+                    <?php endforeach ?>
+                    <?php if(count($model_categoria->arr_categorias) == 0): ?>
+                        <tr>
+                            <td colspan="4">Nenhum funcionário encontrado.</td>
+                        </tr>
+                    <?php endif ?>
+              </tbody>
+            </table>
         </main>
         <?php include 'View/includes/js_config.php' ?>
     </body>

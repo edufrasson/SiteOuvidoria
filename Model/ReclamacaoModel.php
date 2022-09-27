@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+use App\DAO\ReclamacaoDAO;
+
 class ReclamacaoModel{
     public $id, $descricao, $titulo, $latitude, $longitude;
     public $data_cadastro, $categoria, $status_reclamacao;

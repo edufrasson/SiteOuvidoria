@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controller;
+use App\Model\ReclamacaoModel;
+
 class ReclamacaoController extends Controller
 {
     public static function index()

@@ -1,5 +1,8 @@
 <?php 
 
+namespace App\Controller;
+use App\Model\CategoriaModel;
+
 class CategoriaController extends Controller{
     public static function form() 
         {
@@ -9,9 +12,11 @@ class CategoriaController extends Controller{
 
             if(isset($_GET['id'])) $model = $model->getById( (int) $_GET['id'] );
 
-            parent::render('Categoria/FormCategoria', $model);
-        }
+            $model_categoria = new CategoriaModel();
+            $model_categoria->getAllRows();
 
+            include './View/modules/Categoria/FormCategoria.php';
+        }
         public static function index() {
             parent::isAuthenticated();
 

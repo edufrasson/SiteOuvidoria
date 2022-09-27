@@ -1,5 +1,9 @@
 <?php
 
+namespace App\DAO;
+use App\Model\ReclamacaoModel;
+use \PDO;
+
 class ReclamacaoDAO{
     private $conexao;
 

@@ -1,5 +1,10 @@
 <?php
 
+use App\Controller\
+{
+    FuncionarioController, BairroController, CategoriaController, LoginController, ReclamacaoController, RespostaController, HomeController
+};
+
 switch($uri_parse){
 
     // Entidade Funcionário

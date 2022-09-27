@@ -1,5 +1,9 @@
 <?php
 
+namespace App\DAO;
+use \PDO;
+use \PDOException;
+
 class MySQL extends PDO {
     
     private $dsn = 'mysql:host=metoda.com.br:3306;dbname=metodaco_ouvidoria';
@@ -18,7 +22,7 @@ class MySQL extends PDO {
             );
 
         } catch (PDOException $err) {
-            echo "Oooo irmãozinho... Deu erro ai $err";
+            echo "ERRO: $err";
         }
     }
 }

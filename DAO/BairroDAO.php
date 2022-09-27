@@ -1,5 +1,9 @@
 <?php
 
+namespace App\DAO;
+use App\Model\BairroModel;
+use \PDO;
+
 class BairroDAO{
     public $conexao;
         public function __construct()

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controller;
+
 abstract class Controller
 {
     protected static function isAuthenticated()

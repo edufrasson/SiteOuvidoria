@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+use App\DAO\CategoriaDAO;
+
 class CategoriaModel{
     public $id, $descricao, $data_cadastro;
 

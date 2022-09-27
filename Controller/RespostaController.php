@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controller;
+use App\Model\RespostaModel;
+use App\Model\ReclamacaoModel;
+
 class RespostaController extends Controller{
     public static function form(){
             

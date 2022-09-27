@@ -8,7 +8,7 @@
     <?php include 'View/includes/css_config.php' ?>
     <link href="View/css/home.css" rel="stylesheet">      
 
-    <title>Seja Bem Vindo <?= $_SESSION['usuario']->nome ?> - OuvidoriaJahu</title>
+    <title>Seja Bem Vindo <?= $_SESSION['usuario']->nome ?> - ResolveJahu</title>
 </head>
 
 <body>
@@ -100,8 +100,8 @@
                             <span class="iconify icon" data-icon="bx:message-detail"></span>
                             <br><br>
 
-                            <h2>Responder <span class="badge bg-success">Novo</span></h2>
-                            <p>Próximo requerimento (ordenado por urgência).</p>
+                            <h2>Responder</h2>
+                            <p>Próximo requerimento</p>
                             <p><a class="btn btn-primary" href="/reclamacoes">Expandir &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
 
